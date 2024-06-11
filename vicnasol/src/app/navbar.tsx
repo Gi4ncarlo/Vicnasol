@@ -9,24 +9,29 @@ export default function Navbar() {
            VICNASOL
           </Link>
         </div>
-        <ul className="flex mx-5">
-          <li>
-            <Link href="./SobreNosotros">
-             <p>PEP</p>
+        <ul className="flex mx-5 text-white">
+          <li className="mr-6">
+            <Link href="/proyectos">
+             <p>Proyectos</p>
             </Link>
           </li>
-          {/* <li>
+          <li className="mr-6">
             <Link href="/about">
-              About
+              <p>Servicios</p>
             </Link>
           </li>
-          <li>
-            <Link href="/contact">
-              Contact
+          <li className="mr-6">
+            <Link href="/sobrenosotros">
+              <p>Sobre Nosotros</p>
             </Link>
-          </li> */}
+          </li>
+          <li className="mr-6">
+            <Link href="/contacto">
+            <p>Contacto</p>
+            </Link>
+          </li>
         </ul>
       </div>
-    </nav>
+    </nav> 
   );
 }
