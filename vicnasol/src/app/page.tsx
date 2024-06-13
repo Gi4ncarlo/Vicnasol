@@ -8,6 +8,12 @@ import { FreeMode, Navigation, Thumbs } from 'swiper/modules'
 
 import { images } from '../app/lib/images'
 
+//BENTO
+
+import { BentoGridThirdDemo } from '../app/intentoBendo'
+
+//--------
+
 import 'swiper/css'
 import 'swiper/css/free-mode'
 import 'swiper/css/navigation'
@@ -16,7 +22,7 @@ import 'swiper/css/thumbs'
 const Home = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null)
   return (
-    <main className="h-screen bg-green-50">
+    <main className=" bg-green-50">
       <div className="">
         <h1 className="text-3xl font-bold text-center pt-4">En proceso...</h1>
       </div>
@@ -70,9 +76,14 @@ const Home = () => {
           ))}
         </Swiper>
       </div>
-    </section>
-    </main>
-  );
-};
 
+    <BentoGridThirdDemo/>
+    </section>
+
+  
+
+    </main>
+
+  );
+}
 export default Home;
