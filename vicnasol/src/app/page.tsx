@@ -80,6 +80,10 @@ const Home = () => {
     <BentoGridThirdDemo/>
     </section>
 
+    <section>
+      <div className='h-96 w-1200px rounded-lg border border-black m-3'></div>
+    </section>
+
   
 
     </main>
