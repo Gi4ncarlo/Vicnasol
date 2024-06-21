@@ -12,6 +12,7 @@ import {
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { images } from "../app/lib/images";
+import Link from "next/link";
 
 export function BentoGridThirdDemo() {
   return (
@@ -159,7 +160,7 @@ const SkeletonFour = () => {
           className="rounded-full h-10 w-10"
         />
         <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
-          Projects...
+          Nos destaca
         </p>
         <p className="border border-red-500 bg-red-100 dark:bg-red-900/20 text-red-600 text-xs rounded-full px-2 py-0.5 mt-4">
           Compromiso
@@ -174,7 +175,7 @@ const SkeletonFour = () => {
           className="rounded-full h-10 w-10"
         />
         <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
-        Projects...
+          Brindamos
         </p>
         <p className="border border-green-500 bg-green-100 dark:bg-green-900/20 text-green-600 text-xs rounded-full px-2 py-0.5 mt-4">
           Confiabilidad
@@ -192,7 +193,7 @@ const SkeletonFour = () => {
           className="rounded-full h-10 w-10"
         />
         <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
-          Projects...
+          Profesionales
         </p>
         <p className="border border-orange-500 bg-orange-100 dark:bg-orange-900/20 text-orange-600 text-xs rounded-full px-2 py-0.5 mt-4">
           Eficiencia
@@ -303,6 +304,9 @@ const items = [
     description: (
       <span className="text-sm">
         Aqui podras encontrar trabajos previos.
+        <button className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded ml-4">
+              <Link href="/pages/Proyectos">Ver más</Link>
+            </button>
       </span>
     ),
     header: <SkeletonFour />,

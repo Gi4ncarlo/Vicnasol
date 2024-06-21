@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Head from "next/head";
 import Navbar from "./navbar";
 import Footer from "./footer";
 
@@ -18,9 +19,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <head>
+      <Head>
       <title>{metadata.title as string}</title>
-      </head>
+      <link rel="icon" href="/favicon.ico" />
+      </Head>
       <body className={inter.className}>
         <Navbar />
         {children}

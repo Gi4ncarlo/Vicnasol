@@ -1,5 +1,5 @@
-import first from '../../../public/images/prueba.jpg'
-import second from '../../../public/images/pornhub5738.jpg'
+import first from '../../../public/images/fondopagprincipal.jpg'
+import second from '../../../public/images/112.jpg'
 import rosas from '../../../public/images/rosas.jpg'
 import cantero from '../../../public/images/entrada.jpg'
 import ia from '../../../public/images/logoia.jpg'

@@ -10,7 +10,7 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            By {"ARCHI"}
+            By {"SOBRE NOSOTROS"}
           </a>
         </div>
       </div>
