@@ -1,0 +1,7 @@
+export default function Footer() {
+    return (
+        <footer className="bg-green-800 text-white p-4 text-center">
+            &copy; 2010 Vicnasol. Todos los derechos reservados.
+        </footer>
+    );
+}
