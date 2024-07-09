@@ -24,15 +24,14 @@ import "swiper/css/thumbs";
 const Home = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   return (
-    <main className=" bg-green-50">
-      <div className="relative w-full h-[200px] overflow-hidden">
+    <main className="bg-green-50">
+      <div className="relative w-full h-64 md:h-96 lg:h-[400px] overflow-hidden">
         <Image
           src="/images/fondopagprincipal.jpg"
           alt="Fondo principal"
-          objectFit="cover"
+          layout="fill"
+          objectFit="cover" // Asegura que la imagen cubra todo el contenedor
           objectPosition="center"
-          width={500}
-          height={200}
         />
       </div>
       <section className="min-h-screen py-12">
@@ -41,10 +40,6 @@ const Home = () => {
             loop={true}
             spaceBetween={10}
             navigation={true}
-            // thumbs={{
-            //   swiper:
-            //     thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null
-            // }}
             modules={[FreeMode, Navigation, Thumbs]}
             className="h-96 w-full rounded-lg"
           >
@@ -54,7 +49,8 @@ const Home = () => {
                   <Image
                     src={image.src}
                     alt={image.alt}
-                    className="block h-full w-full object-cover"
+                    layout="fill"
+                    className="object-cover"
                   />
                 </div>
               </SwiperSlide>
@@ -63,7 +59,6 @@ const Home = () => {
 
           {/* Thumbnail */}
           <Swiper
-            // onSwiper={setThumbsSwiper}
             loop={true}
             spaceBetween={12}
             slidesPerView={2}
@@ -78,7 +73,8 @@ const Home = () => {
                   <Image
                     src={image.src}
                     alt={image.alt}
-                    className="block h-full w-full object-cover"
+                    layout="fill"
+                    className="object-cover"
                   />
                 </button>
               </SwiperSlide>
@@ -93,8 +89,7 @@ const Home = () => {
 
       <section>
         <div className="container mx-auto flex justify-center">
-          <div className="m-3 p-3 text-center text-3xl font-bold
-           text-green-700">
+          <div className="m-3 p-3 text-center text-3xl font-bold text-green-700">
             <h2>Empresa Vicnasol de Jardinería</h2>
           </div>
         </div>
@@ -118,7 +113,7 @@ const Home = () => {
             valores y el equipo que hace posible Vicnasol. <br />
             <br />
             <button className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded m-3 mx-auto flex justify-center">
-              <Link href="/pages/SobreNosotros">Ver más</Link>
+              <Link href="/pages/SobreNosotros">Ver más</Link>
             </button>
           </p>
         </div>
@@ -126,4 +121,5 @@ const Home = () => {
     </main>
   );
 };
+
 export default Home;

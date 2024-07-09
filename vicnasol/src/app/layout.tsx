@@ -21,11 +21,12 @@ export default function RootLayout({
     <html lang="es">
       <Head>
       <title>{metadata.title as string}</title>
-      <link rel="icon" href="/favicon.ico" />
       </Head>
       <body className={inter.className}>
         <Navbar />
+        <div className="min-h-screen bg-green-50">
         {children}
+        </div>
         <Footer />
       </body>
     </html>
