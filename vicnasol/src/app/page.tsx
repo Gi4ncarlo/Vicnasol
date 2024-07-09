@@ -88,11 +88,6 @@ const Home = () => {
       <hr></hr>
 
       <section>
-        <div className="container mx-auto flex justify-center">
-          <div className="m-3 p-3 text-center text-3xl font-bold text-green-700">
-            <h2>Empresa Vicnasol de Jardinería</h2>
-          </div>
-        </div>
         <div className="max-w-4xl mx-auto p-8">
           <div className="max-w-4xl mx-auto p-8">
             <div className="bg-white shadow-lg rounded-lg overflow-hidden">
