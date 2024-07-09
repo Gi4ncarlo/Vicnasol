@@ -25,12 +25,14 @@ const Home = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   return (
     <main className=" bg-green-50">
-      <div className="">
+      <div className="relative w-full h-[200px] overflow-hidden">
         <Image
           src="/images/fondopagprincipal.jpg"
           alt="Fondo principal"
-          width={1920}
-          height={500}
+          objectFit="cover"
+          objectPosition="center"
+          width={500}
+          height={200}
         />
       </div>
       <section className="min-h-screen py-12">
