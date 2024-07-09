@@ -92,35 +92,44 @@ const Home = () => {
       <hr></hr>
 
       <section>
-        <div className="container mx-auto flex justify-center">
-          <div className="m-3 p-3 text-center text-3xl font-bold
-           text-green-700">
-            <h2>Empresa Vicnasol de Jardinería</h2>
-          </div>
-        </div>
+        <div className="max-w-4xl mx-auto p-8">
+          <div className="max-w-4xl mx-auto p-8">
+            <div className="bg-white shadow-lg rounded-lg overflow-hidden">
+              <div className="p-6">
+                <h1 className="text-3xl font-bold text-green-700 mb-6">
+                  Empresa Vicnasol de Jardinería
+                </h1>
 
-        <div className="container my-4 mx-auto flex justify-center font-sans w-1/2">
-          <p className="text-lg">
-            Bienvenido a Vicnasol: Tu Socio en Jardinería En Vicnasol nos
-            dedicamos con pasión y dedicación a embellecer y mantener tus
-            espacios verdes. Con años de experiencia en el sector de la
-            jardinería general, ofrecemos servicios de diseño, mantenimiento y
-            construcción de jardines tanto para particulares como para empresas.{" "}
-            <br />
-            <br />
-            Nuestro compromiso con la calidad se refleja en cada proyecto que
-            emprendemos. Desde el cuidado meticuloso de cada planta hasta el
-            diseño creativo de paisajes, en Vicnasol nos aseguramos de que cada
-            detalle sea perfecto. <br />
-            <br />
-            Descubre cómo podemos transformar tu entorno natural con
-            profesionalismo y estilo, para conocer nuestra historia, nuestros
-            valores y el equipo que hace posible Vicnasol. <br />
-            <br />
-            <button className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded m-3 mx-auto flex justify-center">
-              <Link href="/pages/SobreNosotros">Ver más</Link>
-            </button>
-          </p>
+                <p className="mb-4">
+                  Bienvenido a Vicnasol: Tu Socio en Jardinería En Vicnasol nos
+                  dedicamos con pasión y dedicación a embellecer y mantener tus
+                  espacios verdes. Con años de experiencia en el sector de la
+                  jardinería general, ofrecemos servicios de diseño,
+                  mantenimiento y construcción de jardines tanto para
+                  particulares como para empresas.
+                </p>
+
+                <p className="mb-4">
+                  Nuestro compromiso con la calidad se refleja en cada proyecto
+                  que emprendemos. Desde el cuidado meticuloso de cada planta
+                  hasta el diseño creativo de paisajes, en Vicnasol nos
+                  aseguramos de que cada detalle sea perfecto.
+                </p>
+
+                <p className="mb-6">
+                  Descubre cómo podemos transformar tu entorno natural con
+                  profesionalismo y estilo, para conocer nuestra historia,
+                  nuestros valores y el equipo que hace posible Vicnasol.
+                </p>
+              </div>
+
+              <div className="bg-green-50 px-6 py-4">
+                <button className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded w-full">
+                  Ver más
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>

@@ -11,7 +11,7 @@ export default function Navbar() {
         </div>
         <ul className="flex mx-5 text-white">
           <li className="mr-6">
-            <Link href="/Proyectos">
+            <Link href="/pages/Proyectos">
              <p>Proyectos</p>
             </Link>
           </li>
@@ -21,7 +21,7 @@ export default function Navbar() {
             </Link>
           </li>
           <li className="mr-6">
-            <Link href="/SobreNosotros">
+            <Link href="/pages/SobreNosotros">
               <p>Sobre Nosotros</p>
             </Link>
           </li>
