@@ -26,7 +26,7 @@ export default function Navbar() {
             </Link>
           </li>
           <li className="mr-6">
-            <Link href="/Contacto">
+            <Link href="/pages/Contacto">
             <p>Contacto</p>
             </Link>
           </li>
