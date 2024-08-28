@@ -133,6 +133,7 @@ const Home = () => {
       </section>
 
       <hr></hr>
+      
 
       <section className="min-h-[800px]">
         <BentoGridThirdDemo />
