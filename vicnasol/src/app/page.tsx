@@ -30,11 +30,11 @@ const Home = () => {
           src="/images/fondopagprincipal.jpg"
           alt="Fondo principal"
           layout="fill"
-          objectFit="cover" // Asegura que la imagen cubra todo el contenedor
+          objectFit="cover"
           objectPosition="center"
         />
       </div>
-      <section className="min-h-screen py-12">
+      <section className="py-12">
         <div className="container mx-auto">
           <Swiper
             loop={true}
@@ -81,52 +81,61 @@ const Home = () => {
             ))}
           </Swiper>
         </div>
+      </section>
 
-        <BentoGridThirdDemo />
+      <section>
+        <div className="bg-green-800 grid grid-cols-2 gap-10 max-w-screen-2xl mx-auto p-8">
+          <div className="bg-white shadow-lg rounded-lg overflow-hidden flex flex-col">
+            <div className="p-6 flex-grow">
+              <h1 className="text-3xl font-bold text-green-700 mb-6">
+                Empresa Vicnasol de Jardinería
+              </h1>
+
+              <p className="mb-4">
+                Bienvenido a Vicnasol: Tu Socio en Jardinería En Vicnasol nos
+                dedicamos con pasión y dedicación a embellecer y mantener tus
+                espacios verdes. Con años de experiencia en el sector de la
+                jardinería general, ofrecemos servicios de diseño, mantenimiento
+                y construcción de jardines tanto para particulares como para
+                empresas.
+              </p>
+
+              <p className="mb-4">
+                Nuestro compromiso con la calidad se refleja en cada proyecto
+                que emprendemos. Desde el cuidado meticuloso de cada planta
+                hasta el diseño creativo de paisajes, en Vicnasol nos aseguramos
+                de que cada detalle sea perfecto.
+              </p>
+
+              <p className="mb-6">
+                Descubre cómo podemos transformar tu entorno natural con
+                profesionalismo y estilo, para conocer nuestra historia,
+                nuestros valores y el equipo que hace posible Vicnasol.
+              </p>
+            </div>
+
+            <div className="bg-green-50 px-6 py-4">
+              <button className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded w-full">
+                Ver más
+              </button>
+            </div>
+          </div>
+          <div className="w-full h-full shadow-lg rounded-3xl overflow-hidden">
+            <Image
+              src="/images/rosas.jpg"
+              alt="Fondo principal"
+              width={1000}
+              height={600}
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </div>
       </section>
 
       <hr></hr>
 
-      <section>
-        <div className="max-w-4xl mx-auto p-8">
-          <div className="max-w-4xl mx-auto p-8">
-            <div className="bg-white shadow-lg rounded-lg overflow-hidden">
-              <div className="p-6">
-                <h1 className="text-3xl font-bold text-green-700 mb-6">
-                  Empresa Vicnasol de Jardinería
-                </h1>
-
-                <p className="mb-4">
-                  Bienvenido a Vicnasol: Tu Socio en Jardinería En Vicnasol nos
-                  dedicamos con pasión y dedicación a embellecer y mantener tus
-                  espacios verdes. Con años de experiencia en el sector de la
-                  jardinería general, ofrecemos servicios de diseño,
-                  mantenimiento y construcción de jardines tanto para
-                  particulares como para empresas.
-                </p>
-
-                <p className="mb-4">
-                  Nuestro compromiso con la calidad se refleja en cada proyecto
-                  que emprendemos. Desde el cuidado meticuloso de cada planta
-                  hasta el diseño creativo de paisajes, en Vicnasol nos
-                  aseguramos de que cada detalle sea perfecto.
-                </p>
-
-                <p className="mb-6">
-                  Descubre cómo podemos transformar tu entorno natural con
-                  profesionalismo y estilo, para conocer nuestra historia,
-                  nuestros valores y el equipo que hace posible Vicnasol.
-                </p>
-              </div>
-
-              <div className="bg-green-50 px-6 py-4">
-                <button className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded w-full">
-                  Ver más
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
+      <section className="min-h-[800px]">
+        <BentoGridThirdDemo />
       </section>
     </main>
   );
