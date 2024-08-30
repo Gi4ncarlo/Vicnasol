@@ -25,7 +25,7 @@ const Home = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   return (
     <main className="bg-green-50">
-      <div className="relative w-full h-64 md:h-96 lg:h-[400px] overflow-hidden">
+      {/* <div className="relative w-full h-64 md:h-96 lg:h-[400px] overflow-hidden">
         <Image
           src="/images/fondopagprincipal.jpg"
           alt="Fondo principal"
@@ -33,7 +33,7 @@ const Home = () => {
           objectFit="cover"
           objectPosition="center"
         />
-      </div>
+      </div> */}
       <section className="py-12">
         <div className="container mx-auto">
           <Swiper
@@ -84,10 +84,10 @@ const Home = () => {
       </section>
 
       <section>
-        <div className="bg-green-800 grid grid-cols-2 gap-10 max-w-screen-2xl mx-auto p-8">
-          <div className="bg-white shadow-lg rounded-lg overflow-hidden flex flex-col">
-            <div className="p-6 flex-grow">
-              <h1 className="text-3xl font-bold text-green-700 mb-6">
+        <div className="bg-green-800 grid grid-cols-2 gap-10 max-w-screen-3xl max-h-[800px] mx-auto p-8">
+          <div className="bg-white shadow-lg rounded-lg flex flex-col max-h-[600px]">
+            <div className="p-4 flex-grow">
+              <h1 className="text-2xl font-bold text-green-700 mb-4">
                 Empresa Vicnasol de Jardinería
               </h1>
 
@@ -114,13 +114,13 @@ const Home = () => {
               </p>
             </div>
 
-            <div className="bg-green-50 px-6 py-4">
+            <div className=" px-6 py-4">
               <button className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded w-full">
                 Ver más
               </button>
             </div>
           </div>
-          <div className="w-full h-full shadow-lg rounded-3xl overflow-hidden">
+          <div className="w-full h-full shadow-lg rounded-3xl overflow-hidden max-h-[400px]">
             <Image
               src="/images/rosas.jpg"
               alt="Fondo principal"
