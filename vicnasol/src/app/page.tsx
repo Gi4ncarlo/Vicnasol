@@ -21,6 +21,7 @@ import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
 
+
 const Home = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   return (
@@ -34,7 +35,7 @@ const Home = () => {
           objectPosition="center"
         />
       </div> */}
-      <section className="py-12">
+      <section className="py-12 mt-14">
         <div className="container mx-auto">
           <Swiper
             loop={true}
@@ -87,11 +88,11 @@ const Home = () => {
         <div className="bg-green-800 grid grid-cols-2 gap-10 max-w-screen-3xl max-h-[800px] mx-auto p-8">
           <div className="bg-white shadow-lg rounded-lg flex flex-col max-h-[600px]">
             <div className="p-4 flex-grow">
-              <h1 className="text-2xl font-bold text-green-700 mb-4">
+              <h1 className="text-3xl font-bold text-green-700 mb-4 font-nunito text-center">
                 Empresa Vicnasol de Jardinería
               </h1>
 
-              <p className="mb-4">
+              <p className="mb-4 text-xl font-lato">
                 Bienvenido a Vicnasol: Tu Socio en Jardinería En Vicnasol nos
                 dedicamos con pasión y dedicación a embellecer y mantener tus
                 espacios verdes. Con años de experiencia en el sector de la
@@ -100,22 +101,22 @@ const Home = () => {
                 empresas.
               </p>
 
-              <p className="mb-4">
+              <p className="mb-4 text-xl font-lato">
                 Nuestro compromiso con la calidad se refleja en cada proyecto
                 que emprendemos. Desde el cuidado meticuloso de cada planta
                 hasta el diseño creativo de paisajes, en Vicnasol nos aseguramos
                 de que cada detalle sea perfecto.
               </p>
 
-              <p className="mb-6">
+              <p className="mb-6 text-xl font-lato">
                 Descubre cómo podemos transformar tu entorno natural con
                 profesionalismo y estilo, para conocer nuestra historia,
                 nuestros valores y el equipo que hace posible Vicnasol.
               </p>
             </div>
 
-            <div className=" px-6 py-4">
-              <button className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded w-full">
+            <div className=" px-6 py-4 mx-auto">
+              <button className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded w-[200px] font-roboto text-xl">
                 Ver más
               </button>
             </div>

@@ -17,8 +17,11 @@ module.exports = {
     extend: {
       fontFamily: {
         playfair: 'var(--font-playfair)',
-        roboto: 'var(--font-roboto)',
         lora: 'var(--font-lora)',
+        nunito: ['Nunito', 'serif'],
+        lato: ['Lato', 'serif'],
+        roboto: ['Roboto', 'serif'],
+        cinzel: ['Cinzel', 'serif'],
       },
     },
   },
