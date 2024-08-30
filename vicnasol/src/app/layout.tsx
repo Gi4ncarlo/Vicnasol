@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Head from "next/head";
-import Navbar from "./navbar";
+import Navbar from "./components/navbar";
 import Footer from "./footer";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -21,11 +21,12 @@ export default function RootLayout({
     <html lang="es">
       <Head>
       <title>{metadata.title as string}</title>
-      <link rel="icon" href="/favicon.ico" />
       </Head>
       <body className={inter.className}>
         <Navbar />
+        <div className="min-h-screen bg-green-50">
         {children}
+        </div>
         <Footer />
       </body>
     </html>

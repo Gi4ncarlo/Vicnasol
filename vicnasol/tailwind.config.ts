@@ -14,7 +14,13 @@ module.exports = {
   ],
   darkMode: "class",
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        playfair: 'var(--font-playfair)',
+        roboto: 'var(--font-roboto)',
+        lora: 'var(--font-lora)',
+      },
+    },
   },
   plugins: [addVariablesForColors],
 };

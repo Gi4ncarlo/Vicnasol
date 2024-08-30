@@ -24,27 +24,22 @@ import "swiper/css/thumbs";
 const Home = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   return (
-    <main className=" bg-green-50">
-      <div className="relative w-full h-[200px] overflow-hidden">
+    <main className="bg-green-50">
+      {/* <div className="relative w-full h-64 md:h-96 lg:h-[400px] overflow-hidden">
         <Image
           src="/images/fondopagprincipal.jpg"
           alt="Fondo principal"
+          layout="fill"
           objectFit="cover"
           objectPosition="center"
-          width={500}
-          height={200}
         />
-      </div>
-      <section className="min-h-screen py-12">
+      </div> */}
+      <section className="py-12">
         <div className="container mx-auto">
           <Swiper
             loop={true}
             spaceBetween={10}
             navigation={true}
-            // thumbs={{
-            //   swiper:
-            //     thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null
-            // }}
             modules={[FreeMode, Navigation, Thumbs]}
             className="h-96 w-full rounded-lg"
           >
@@ -54,7 +49,8 @@ const Home = () => {
                   <Image
                     src={image.src}
                     alt={image.alt}
-                    className="block h-full w-full object-cover"
+                    layout="fill"
+                    className="object-cover"
                   />
                 </div>
               </SwiperSlide>
@@ -63,7 +59,6 @@ const Home = () => {
 
           {/* Thumbnail */}
           <Swiper
-            // onSwiper={setThumbsSwiper}
             loop={true}
             spaceBetween={12}
             slidesPerView={2}
@@ -78,52 +73,73 @@ const Home = () => {
                   <Image
                     src={image.src}
                     alt={image.alt}
-                    className="block h-full w-full object-cover"
+                    layout="fill"
+                    className="object-cover"
                   />
                 </button>
               </SwiperSlide>
             ))}
           </Swiper>
         </div>
+      </section>
 
-        <BentoGridThirdDemo />
+      <section>
+        <div className="bg-green-800 grid grid-cols-2 gap-10 max-w-screen-3xl max-h-[800px] mx-auto p-8">
+          <div className="bg-white shadow-lg rounded-lg flex flex-col max-h-[600px]">
+            <div className="p-4 flex-grow">
+              <h1 className="text-2xl font-bold text-green-700 mb-4">
+                Empresa Vicnasol de Jardinería
+              </h1>
+
+              <p className="mb-4">
+                Bienvenido a Vicnasol: Tu Socio en Jardinería En Vicnasol nos
+                dedicamos con pasión y dedicación a embellecer y mantener tus
+                espacios verdes. Con años de experiencia en el sector de la
+                jardinería general, ofrecemos servicios de diseño, mantenimiento
+                y construcción de jardines tanto para particulares como para
+                empresas.
+              </p>
+
+              <p className="mb-4">
+                Nuestro compromiso con la calidad se refleja en cada proyecto
+                que emprendemos. Desde el cuidado meticuloso de cada planta
+                hasta el diseño creativo de paisajes, en Vicnasol nos aseguramos
+                de que cada detalle sea perfecto.
+              </p>
+
+              <p className="mb-6">
+                Descubre cómo podemos transformar tu entorno natural con
+                profesionalismo y estilo, para conocer nuestra historia,
+                nuestros valores y el equipo que hace posible Vicnasol.
+              </p>
+            </div>
+
+            <div className=" px-6 py-4">
+              <button className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded w-full">
+                Ver más
+              </button>
+            </div>
+          </div>
+          <div className="w-full h-full shadow-lg rounded-3xl overflow-hidden max-h-[400px]">
+            <Image
+              src="/images/rosas.jpg"
+              alt="Fondo principal"
+              width={1000}
+              height={600}
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </div>
       </section>
 
       <hr></hr>
+      
 
-      <section>
-        <div className="container mx-auto flex justify-center">
-          <div className="m-3 p-3 text-center text-3xl font-bold
-           text-green-700">
-            <h2>Empresa Vicnasol de Jardinería</h2>
-          </div>
-        </div>
-
-        <div className="container my-4 mx-auto flex justify-center font-sans w-1/2">
-          <p className="text-lg">
-            Bienvenido a Vicnasol: Tu Socio en Jardinería En Vicnasol nos
-            dedicamos con pasión y dedicación a embellecer y mantener tus
-            espacios verdes. Con años de experiencia en el sector de la
-            jardinería general, ofrecemos servicios de diseño, mantenimiento y
-            construcción de jardines tanto para particulares como para empresas.{" "}
-            <br />
-            <br />
-            Nuestro compromiso con la calidad se refleja en cada proyecto que
-            emprendemos. Desde el cuidado meticuloso de cada planta hasta el
-            diseño creativo de paisajes, en Vicnasol nos aseguramos de que cada
-            detalle sea perfecto. <br />
-            <br />
-            Descubre cómo podemos transformar tu entorno natural con
-            profesionalismo y estilo, para conocer nuestra historia, nuestros
-            valores y el equipo que hace posible Vicnasol. <br />
-            <br />
-            <button className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded m-3 mx-auto flex justify-center">
-              <Link href="/pages/SobreNosotros">Ver más</Link>
-            </button>
-          </p>
-        </div>
+      <section className="min-h-[800px]">
+        <BentoGridThirdDemo />
       </section>
     </main>
   );
 };
+
 export default Home;
