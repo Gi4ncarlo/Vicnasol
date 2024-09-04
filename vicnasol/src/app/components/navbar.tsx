@@ -24,12 +24,12 @@ export default function Navbar() {
       }`}
     >
       <div className="container flex items-center justify-between mx-auto px-4 py-2">
-        <div className="text-white text-3xl font-bold font-cinzel">
+        <div className={`text-white text-3xl font-bold font-cinzel ${isScrolled ? "text-2xl" : ""}`}>
           <Link href="/">
             VICNASOL
           </Link>
         </div>
-        <ul className="flex space-x-6 text-white text-xl font-roboto">
+        <ul className={`flex space-x-6 text-white text-xl font-roboto ${isScrolled ? "text-[17px] duration-700" : ""}`}>
           <li className="hover:-translate-y-1 hover:underline">
             <Link href="/pages/Proyectos">Proyectos</Link>
           </li>
