@@ -1,10 +1,8 @@
-// pages/contact.tsx
-
 import { NextPage } from 'next';
 
 const Contact: NextPage = () => {
   return (
-    <div className="container mx-auto p-4 max-w-lg">
+    <div className="container mt-8 mx-auto p-4 max-w-lg">
       <h2 className="text-2xl font-bold mb-4">Contacto</h2>
       <p className="mb-6">
         Por favor, rellene el formulario para más información y nos comunicaremos lo antes posible. Todos los campos son obligatorios.
