@@ -115,13 +115,13 @@ const Home = () => {
               </p>
             </div>
 
-            <div className=" px-6 py-4 mx-auto">
+            <div className="px-6 py-4 mx-auto">
               <button className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded w-[200px] font-roboto text-xl">
                 Ver más
               </button>
             </div>
           </div>
-          <div className="w-full h-full shadow-lg rounded-3xl overflow-hidden max-h-[400px]">
+          <div className="w-full h-full shadow-lg rounded-3xl overflow-hidden max-h-[500px]">
             <Image
               src="/images/rosas.jpg"
               alt="Fondo principal"
