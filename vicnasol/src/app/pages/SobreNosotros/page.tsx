@@ -19,10 +19,10 @@ const lora = Lora({
 
 export default function Home() {
   return (
-    <main className={`flex min-h-screen flex-col items-center justify-between p-24 ${playfairDisplay.variable} ${roboto.variable} ${lora.variable}`}>
-      <div className="max-w-4xl mx-auto bg-white p-8 shadow-lg">
-        <h1 className="text-4xl font-bold mb-6 font-playfair">Quiénes somos</h1>
-        <p className="mb-4 font-lora">
+    <main className={`flex min-h-screen flex-col items-center justify-between py-8 mt-16 text-center sm:p-24 sm:text-justify ${playfairDisplay.variable} ${roboto.variable} ${lora.variable}`}>
+      <div className="mx-auto bg-white p-1 shadow-lg grid grid-cols-1 gap-4 my-2 sm:p-8 lg:max-w-4xl">
+        <h1 className="text-xl font-bold mb-1 font-playfair sm:text-2xl lg:text-4xl lg:mb-6">Quiénes somos</h1>
+        <p className="mb-4 font-lora text-sm sm:text-base">
           <strong>Vicnasol</strong> es una empresa de servicios medioambientales
           con más de 30 años de experiencia, ubicada en Carrasco, Montevideo y
           Ciudad de la Costa, Uruguay. Nos especializamos en todas las labores
@@ -47,7 +47,7 @@ export default function Home() {
           </span>
         </div>
 
-        <p className="mb-4 font-lora">
+        <p className="mb-4 font-lora text-sm sm:text-base">
           En <strong>Vicnasol</strong> ofrecemos una amplia gama de servicios de
           mantenimiento de jardines para empresas, comunidades de propietarios y
           particulares, así como servicios de mantenimiento de plantas de
@@ -55,7 +55,7 @@ export default function Home() {
           imagen corporativa de cara a los clientes.
         </p>
 
-        <ul className="list-disc pl-6 mb-4 font-lora">
+        <ul className="list-disc pl-6 mb-4 font-lora text-justify text-sm sm:text-base">
           <li>
             Trabajos de desbroces y limpieza de parcelas, taludes, polígonos
             industriales, etc.
@@ -70,7 +70,7 @@ export default function Home() {
           <li>Obras de jardinería.</li>
         </ul>
 
-        <p className="font-lora">
+        <p className="font-lora text-sm sm:text-base">
           En <strong>Vicnasol</strong>, nuestro objetivo es proporcionar un
           servicio integral y de alta calidad, asegurando la satisfacción de
           nuestros clientes y el cuidado del medio ambiente. Nos enorgullecemos
@@ -79,13 +79,13 @@ export default function Home() {
         </p>
       </div>
 
-      <div className="grid grid-cols-3 gap-4 my-8">
+      <div className="grid grid-cols-1 gap-4 mx-4 my-4 sm:grid-cols-2 lg:grid-cols-3">
         <Image
           src="/images/trabajador.jpg"
           alt="Trabajador"
           width={1800}
           height={920}
-          className="min-h-[420px] hover:transform hover:scale-105 transition duration-200"
+          className="sm:min-h-full hover:transform hover:scale-105 transition duration-200 rounded-md"
         />
 
         <Image
@@ -93,7 +93,7 @@ export default function Home() {
           alt="Trabajador"
           width={1800}
           height={920}
-          className="min-h-[420px] hover:transform hover:scale-105 transition duration-200"
+          className="hover:transform hover:scale-105 transition duration-200 rounded-md"
         />
 
         <Image
@@ -101,7 +101,7 @@ export default function Home() {
           alt="Trabajador"
           width={1800}
           height={920}
-          className="min-h-[420px] hover:transform hover:scale-105 transition duration-200"
+          className="hover:transform hover:scale-105 transition duration-200 rounded-md"
         />
       </div>
     </main>

@@ -121,7 +121,7 @@ const Home = () => {
               </button>
             </div>
           </div>
-          <div className="w-full h-full shadow-lg rounded-3xl overflow-hidden max-h-[400px]">
+          <div className="w-full h-full shadow-lg rounded-3xl overflow-hidden max-h-[500px]">
             <Image
               src="/images/rosas.jpg"
               alt="Fondo principal"
