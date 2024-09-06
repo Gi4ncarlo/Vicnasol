@@ -3,6 +3,7 @@
 @tailwind components;
 @tailwind utilities;
 
+background-image: url('/images/fondo_contacto.jpg');
 
 /* main{
     height: 1000px;
