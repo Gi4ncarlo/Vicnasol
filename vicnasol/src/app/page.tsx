@@ -86,7 +86,7 @@ const Home = () => {
 
       <section>
         <div className="bg-green-800 grid grid-cols-2 gap-10 max-w-screen-3xl max-h-[800px] mx-auto p-8">
-          <div className="bg-white shadow-lg rounded-lg flex flex-col max-h-[600px]">
+          <div className="bg-white shadow-lg rounded-lg flex flex-col max-h-[400px]">
             <div className="p-4 flex-grow">
               <h1 className="text-3xl font-bold text-green-700 mb-4 font-nunito text-center">
                 Empresa Vicnasol de Jardinería
@@ -115,7 +115,7 @@ const Home = () => {
               </p>
             </div>
 
-            <div className=" px-6 py-4 mx-auto">
+            <div className="px-6 py-4 mx-auto">
               <button className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded w-[200px] font-roboto text-xl">
                 Ver más
               </button>
