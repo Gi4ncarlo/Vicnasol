@@ -26,7 +26,7 @@ const Home = () => {
         />
       </section> */}
 
-       <section className="py-12 mt-14">
+       <section className="py-12 mt-8 lg:mt-14">
         <div className="container mx-auto">
           <Swiper
             loop={true}
@@ -77,21 +77,21 @@ const Home = () => {
 
       <section className="bg-green-800 p-8 max-w-screen-3xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-          <div className="bg-white shadow-lg rounded-lg p-4 flex flex-col justify-between">
-            <h1 className="text-2xl lg:text-3xl font-bold text-green-700 mb-4 text-center">
+          <div className="bg-white shadow-lg rounded-lg p-4 flex flex-col lg:h-96 justify-between">
+            <h1 className="text-xl xl:text-3xl font-bold text-green-700 mb-4 text-center">
               Empresa Vicnasol de Jardinería
             </h1>
-            <p className="text-sm lg:text-xl mb-4">
+            <p className="text-sm xl:text-lg mb-4">
               Bienvenido a Vicnasol: Tu Socio en Jardinería. Nos dedicamos con
               pasión a embellecer tus espacios verdes, ofreciendo servicios de
               diseño, mantenimiento y construcción de jardines.
             </p>
-            <p className="text-sm lg:text-xl mb-4">
+            <p className="text-sm xl:text-lg mb-4">
               Nuestro compromiso con la calidad se refleja en cada proyecto.
               Desde el cuidado de cada planta hasta el diseño creativo de
               paisajes, aseguramos que cada detalle sea perfecto.
             </p>
-            <p className="text-sm lg:text-xl mb-6">
+            <p className="text-sm xl:text-lg mb-4">
               Descubre cómo podemos transformar tu entorno con profesionalismo y
               estilo. Conoce nuestra historia y valores.
             </p>
