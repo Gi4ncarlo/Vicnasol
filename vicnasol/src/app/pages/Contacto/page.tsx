@@ -74,9 +74,9 @@ const Contact: NextPage = () => {
       <Image
           src="/images/vicnasolContacto.jpg"
           alt="contacto"
-          width={200}
-          height={200}
-          className="min-w-full hover:transform hover:scale-105 transition duration-200 rounded-md  sm:min-h-full p-2 rounded-sm sm:w-[200px] lg:w-[400px] lg:max-h-[700px] lg:max-w-[400px]"
+          width={1920}
+          height={1080}
+          className="min-w-full hover:transform hover:scale-105 transition duration-200 sm:min-h-full p-2 rounded-sm sm:w-[200px] lg:w-[400px] lg:max-h-[700px] lg:max-w-[400px]"
         />
         </div>
     </div>
