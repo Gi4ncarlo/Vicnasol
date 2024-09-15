@@ -6,7 +6,7 @@ import { HiMenu, HiX } from "react-icons/hi";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false); // Estado para controlar el menú hamburguesa
+  const [isMenuOpen, setIsMenuOpen] = useState(false); 
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,11 +27,11 @@ export default function Navbar() {
     <nav
       className={`fixed z-10 top-0 w-full transition-all duration-500 ${
         isScrolled
-          ? "bg-gradient-to-r from-green-900 to-green-700 opacity-90 lg:py-2"
-          : "bg-gradient-to-r from-green-900 to-green-700 py-2 lg:py-4"
+          ? "bg-gradient-to-r from-green-900 to-green-700 opacity-90 py-4 lg:py-3"
+          : "bg-gradient-to-r from-green-900 to-green-700 py-3 lg:py-5"
       }`}
     >
-      <div className="container flex items-center justify-between mx-auto px-2 py-1 lg:px-4 lg:py-2">
+      <div className="container flex items-center justify-between mx-auto px-2 lg:py-1 lg:px-4 lg:py-2">
         <div
           className={`text-white text-lg lg:text-3xl font-bold font-cinzel ${
             isScrolled ? "text-base lg:text-2xl" : ""
@@ -55,7 +55,7 @@ export default function Navbar() {
             <Link href="/pages/Proyectos">Proyectos</Link>
           </li>
           <li className="hover:-translate-y-1 hover:underline">
-            <Link href="/About">Servicios</Link>
+            <Link href="/pages/Servicios">Servicios</Link>
           </li>
           <li className="hover:-translate-y-1 hover:underline">
             <Link href="/pages/SobreNosotros">Sobre Nosotros</Link>
@@ -71,7 +71,7 @@ export default function Navbar() {
               <Link href="/pages/Proyectos">Proyectos</Link>
             </li>
             <li className="hover:-translate-y-1 hover:underline">
-              <Link href="/About">Servicios</Link>
+              <Link href="/pages/Servicios">Servicios</Link>
             </li>
             <li className="hover:-translate-y-1 hover:underline">
               <Link href="/pages/SobreNosotros">Sobre Nosotros</Link>

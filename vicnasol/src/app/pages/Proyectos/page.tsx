@@ -72,9 +72,9 @@ const projects = [
     description:
       "A charming and colorful cottage garden with winding paths and fragrant flowers.",
   },
-  // {
-  //   title: "Polish Garden",
-  //   description:
-  //     "A charming and colorful cottage garden with winding paths and fragrant flowers.",
-  // },
+  {
+    title: "Polish Garden",
+    description:
+      "A charming and colorful cottage garden with winding paths and fragrant flowers.",
+  },
 ];

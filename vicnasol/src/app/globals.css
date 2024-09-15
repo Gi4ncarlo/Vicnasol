@@ -9,5 +9,7 @@ background-image: url('/images/fondo_contacto.jpg');
     height: 1000px;
 } */
 
-
+html{
+    @apply scroll-smooth
+}
 
