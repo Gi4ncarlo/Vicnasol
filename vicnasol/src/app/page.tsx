@@ -12,6 +12,7 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
+import GardenServicesSection from "./components/garden-services-section";
 
 const Home = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
@@ -26,14 +27,14 @@ const Home = () => {
         />
       </section> */}
 
-       <section className="py-12 mt-8 lg:mt-14">
-        <div className="container mx-auto">
+       <section className="">
+        <div className="pt-20">
           <Swiper
             loop={true}
             spaceBetween={10}
             navigation={true}
             modules={[FreeMode, Navigation, Thumbs]}
-            className="h-64 md:h-96 w-full rounded-lg"
+            className="h-96 w-full rounded-lg"
           >
             {images.map((image, index) => (
               <SwiperSlide key={index}>
@@ -50,7 +51,7 @@ const Home = () => {
           </Swiper>
 
           {/* Thumbnail */}
-          <Swiper
+          {/* <Swiper
             loop={true}
             spaceBetween={12}
             slidesPerView={2}
@@ -71,11 +72,11 @@ const Home = () => {
                 </button>
               </SwiperSlide>
             ))}
-          </Swiper>
+          </Swiper> */}
         </div>
       </section>
 
-      <section className="bg-green-800 p-8 max-w-screen-3xl mx-auto">
+      <section className="bg-[#f8f5e6]  p-8 max-w-screen-3xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           <div className="bg-white shadow-lg rounded-lg p-4 flex flex-col lg:h-96 justify-between">
             <h1 className="text-xl xl:text-3xl font-bold text-green-700 mb-4 text-center">
@@ -115,8 +116,9 @@ const Home = () => {
       <hr />
 
       {/* Bento Section */}
-      <section className="min-h-[800px]">
-        <BentoGridThirdDemo />
+      <section className="mx.auto">
+       {/* <BentoGridThirdDemo /> */}
+       <GardenServicesSection />
       </section>
     </main>
   );
