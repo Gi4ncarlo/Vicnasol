@@ -76,31 +76,26 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="bg-[#f8f5e6]  p-8 max-w-screen-3xl mx-auto">
+      <section className="bg-gradient-to-b from-[#F5F5DC] to-[#f8f5e6] p-8 max-w-screen-3xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-          <div className="bg-white shadow-lg rounded-lg p-4 flex flex-col lg:h-96 justify-between">
-            <h1 className="text-xl xl:text-3xl font-bold text-green-700 mb-4 text-center">
+          <div className="p-4 flex flex-col lg:h-96 justify-between">
+            <h1 className="text-xl xl:text-3xl font-bold text-[#3c5a2d] mb-4 text-center">
               Empresa Vicnasol de Jardinería
             </h1>
-            <p className="text-sm xl:text-lg mb-4">
+            <p className="text-muted-foreground text-[#6b7d5e] text-sm xl:text-lg mb-4">
               Bienvenido a Vicnasol: Tu Socio en Jardinería. Nos dedicamos con
               pasión a embellecer tus espacios verdes, ofreciendo servicios de
               diseño, mantenimiento y construcción de jardines.
             </p>
-            <p className="text-sm xl:text-lg mb-4">
+            <p className="text-muted-foreground text-[#6b7d5e] text-sm xl:text-lg mb-4">
               Nuestro compromiso con la calidad se refleja en cada proyecto.
               Desde el cuidado de cada planta hasta el diseño creativo de
               paisajes, aseguramos que cada detalle sea perfecto.
             </p>
-            <p className="text-sm xl:text-lg mb-4">
+            <p className="text-muted-foreground text-[#6b7d5e] text-sm xl:text-lg mb-4">
               Descubre cómo podemos transformar tu entorno con profesionalismo y
               estilo. Conoce nuestra historia y valores.
             </p>
-            <div className="text-center">
-              <button className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded">
-                Ver más
-              </button>
-            </div>
           </div>
           <div className="relative w-full h-64 lg:h-96 shadow-lg rounded-lg overflow-hidden">
             <Image
@@ -112,8 +107,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-
-      <hr />
 
       {/* Bento Section */}
       <section className="mx.auto">

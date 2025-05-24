@@ -6,7 +6,7 @@ import { Card, CardContent } from "@/components/ui/card"
 
 export default function GardenServicesSection() {
   return (
-    <section className="w-full py-12 md:py-24 bg-gradient-to-b from-[#f8f5e6] to-[#edf5e9]">
+    <section className="w-full py-12 md:py-24 bg-gradient-to-b from-[#f8f5e6] to-[#F5F5DC]">
       <div className="container px-4 md:px-6 mx-auto">
         <div className="flex flex-col items-center text-center mb-12">
           <div className="inline-block p-2 bg-[#e6eed8] rounded-full mb-4">
@@ -165,9 +165,9 @@ export default function GardenServicesSection() {
             <Link href="/pages/Proyectos" className="text-[#5a8c42] hover:text-[#3c5a2d] transition-colors"><Button className="bg-[#5a8c42] hover:bg-[#3c5a2d] text-white">Ver Proyectos </Button></Link> 
           </div>
 
-          <div className="bg-[#f8f5e6] rounded-2xl p-8">
+          <div className="bg-[#e6eed8] rounded-2xl p-8">
             <h3 className="text-xl font-bold text-[#3c5a2d] mb-4 flex items-center">
-              <span className="h-8 w-8 rounded-full bg-[#f8b951] text-[#3c5a2d] flex items-center justify-center mr-3 text-sm">
+              <span className="h-8 w-8 rounded-full bg-[#5a8c42] text-white flex items-center justify-center mr-3 text-sm">
                 2
               </span>
               Consultas
@@ -175,7 +175,7 @@ export default function GardenServicesSection() {
             <p className="text-[#6b7d5e] mb-6">
               Respuestas a tus consultas. Contáctanos para obtener asesoramiento personalizado para tu jardín.
             </p>
-            <Link href={"/pages/Contacto"}><Button className="bg-[#f8b951] hover:bg-[#e6a33e] text-[#3c5a2d]">Hacer una consulta</Button></Link>
+            <Link href={"/pages/Contacto"}><Button className="bg-[#5a8c42] hover:bg-[#3c5a2d] text-white">Hacer una consulta</Button></Link>
           </div>
         </div>
       </div>
