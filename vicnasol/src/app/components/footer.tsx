@@ -1,90 +1,49 @@
 import Link from "next/link";
 import Image from "next/image";
+import { TreePine } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#3c5a2d] text-white p-4">
-    <div className="grid grid-cols-1 gap-4 mx-4 my-2 sm:grid-cols-2 lg:grid-cols-3">
-      <ul className="lg:pr-8 text-center sm:pr-0 lg:text-left"> 
-        <li className="font-nunito text-lg py-1 lg:text-lg md:text-base sm:text-sm">
-          Transformando espacios verdes, cuidando cada detalle.
-        </li>
-  
-        <li className="font-lato text-base lg:text-base md:text-sm sm:text-xs">
-          🌿 Ubicación: Av. Las Flores 1234, Ciudad Jardín, Provincia Verde
-        </li>
-  
-        <li className="font-lato text-base lg:text-base md:text-sm sm:text-xs">
-          📞 Teléfono: +54 9 11 1234-5678
-        </li>
-  
-        <li className="font-lato text-base lg:text-base md:text-sm sm:text-xs">
-          📧 Correo electrónico: contacto@vicnasol.com
-        </li>
-  
-        <li className="font-lato text-base lg:text-base md:text-sm sm:text-xs">
-          ⏰ Horario de trabajo: Lunes a Viernes, 8:00 AM - 6:00 PM
-        </li>
-      </ul>
-  
-      <p className="text-xl font-cinzel font-medium m-auto text-center lg:text-lg md:text-base sm:text-sm">
-        &copy; 2010 Vicnasol. Todos los derechos reservados.
-      </p>
-  
-      <ul className="space-x-6 m-auto flex sm:justify-center lg:justify-start">
-        <li className="transform transition-transform duration-300 hover:scale-110">
-          <Link
-            href="https://www.facebook.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              src={"/images/LogosFacebook.png"}
-              alt="Facebook"
-              width={40}
-              height={40}
-              className="mx-auto"
-            />
-            <p className="font-nunito mt-2">Facebook</p>
-          </Link>
-        </li>
-  
-        <li className="transform transition-transform duration-300 hover:scale-110 mx-auto">
-          <Link
-            href="https://www.instagram.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              src={"/images/LogoInstagram.png"}
-              alt="Instagram"
-              width={40}
-              height={40}
-              className="mx-auto"
-            />
-            <p className="font-nunito mt-2">Instagram</p>
-          </Link>
-        </li>
-  
-        <li className="transform transition-transform duration-300 hover:scale-110">
-          <Link
-            href="https://wa.me/5492944777103?text=Hola quiero informacion de su negocio"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              src={"/images/LogosWhatsappIcon.png"}
-              alt="Whatsapp"
-              width={40}
-              height={40}
-              className="mx-auto"
-            />
-            <p className="font-nunito mt-2">Whatsapp</p>
-          </Link>
-        </li>
-      </ul>
-    </div>
-  </footer>
+      <footer className="bg-gray-900 text-white py-12 px-4">
+        <div className="container mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+              <div className="flex items-center space-x-2 mb-4">
+                <TreePine className="h-6 w-6 text-green-500" />
+                <h3 className="text-lg font-bold">Vicnasol</h3>
+              </div>
+              <p className="text-gray-400">Expertos en jardinería y paisajismo con más de 10 años de experiencia.</p>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-4">Servicios</h4>
+              <ul className="space-y-2 text-gray-400">
+                <li>Podadura</li>
+                <li>Plantación</li>
+                <li>Diseño de Jardines</li>
+                <li>Mantenimiento</li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-4">Contacto</h4>
+              <ul className="space-y-2 text-gray-400">
+                <li>+598 94 476 398</li>
+                <li>vicnasol@hotmail.com</li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-4">Horarios</h4>
+              <ul className="space-y-2 text-gray-400">
+                <li>Lun - Vie: 8:00 - 16:00</li>
+                <li>Sábado: 8:00 - 14:00</li>
+                <li>Domingo: Cerrado</li>
+              </ul>
+            </div>
+          </div>
+          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+            <p>&copy; 2024 Vicnasol. Todos los derechos reservados.</p>
+          </div>
+        </div>
+      </footer>
   
   );
 }

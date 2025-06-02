@@ -1,8 +1,8 @@
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowRight, Leaf, Shield, PenToolIcon as Tool } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
+import { ArrowRight, Leaf, PenToolIcon as Tool } from "lucide-react"
+import { Button } from "@/app/components/ui/button"
+import { Card, CardContent } from "@/app/components/ui/card"
 
 export default function GardenServicesSection() {
   return (
@@ -110,48 +110,7 @@ export default function GardenServicesSection() {
             </CardContent>
           </Card>
         </div>
-
-        {/* Values Section */}
-        <div className="relative bg-[#3c5a2d]/10 rounded-2xl p-8 mb-16">
-          <div className="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-[#f8b951] text-[#3c5a2d] font-bold px-6 py-2 rounded-full">
-            Nuestros Valores
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
-            <div className="flex flex-col items-center text-center p-6 bg-white/70 backdrop-blur-sm rounded-xl">
-              <div className="h-16 w-16 rounded-full bg-[#e6eed8] flex items-center justify-center mb-4">
-                <Shield className="h-8 w-8 text-[#5a8c42]" />
-              </div>
-              <h3 className="text-lg font-bold text-[#3c5a2d] mb-2">Compromiso</h3>
-              <p className="text-[#6b7d5e]">
-                Nos destacamos por nuestro compromiso con la calidad y satisfacción del cliente.
-              </p>
-            </div>
-
-            <div className="flex flex-col items-center text-center p-6 bg-white/70 backdrop-blur-sm rounded-xl">
-              <div className="h-16 w-16 rounded-full bg-[#e6eed8] flex items-center justify-center mb-4">
-                <Shield className="h-8 w-8 text-[#5a8c42]" />
-              </div>
-              <h3 className="text-lg font-bold text-[#3c5a2d] mb-2">Confiabilidad</h3>
-              <p className="text-[#6b7d5e]">
-                Brindamos servicios confiables y puntuales, respetando tiempos y acuerdos.
-              </p>
-            </div>
-
-            <div className="flex flex-col items-center text-center p-6 bg-white/70 backdrop-blur-sm rounded-xl">
-              <div className="h-16 w-16 rounded-full bg-[#e6eed8] flex items-center justify-center mb-4">
-                <Tool className="h-8 w-8 text-[#5a8c42]" />
-              </div>
-              <h3 className="text-lg font-bold text-[#3c5a2d] mb-2">Eficiencia</h3>
-              <p className="text-[#6b7d5e]">
-                Profesionales capacitados que trabajan con eficiencia y atención al detalle.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Projects & Consultation */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+         <div className="flex justify-center">
           <div className="bg-[#e6eed8] rounded-2xl p-8">
             <h3 className="text-xl font-bold text-[#3c5a2d] mb-4 flex items-center">
               <span className="h-8 w-8 rounded-full bg-[#5a8c42] text-white flex items-center justify-center mr-3 text-sm">
@@ -164,20 +123,7 @@ export default function GardenServicesSection() {
             </p>
             <Link href="/pages/Proyectos" className="text-[#5a8c42] hover:text-[#3c5a2d] transition-colors"><Button className="bg-[#5a8c42] hover:bg-[#3c5a2d] text-white">Ver Proyectos </Button></Link> 
           </div>
-
-          <div className="bg-[#e6eed8] rounded-2xl p-8">
-            <h3 className="text-xl font-bold text-[#3c5a2d] mb-4 flex items-center">
-              <span className="h-8 w-8 rounded-full bg-[#5a8c42] text-white flex items-center justify-center mr-3 text-sm">
-                2
-              </span>
-              Consultas
-            </h3>
-            <p className="text-[#6b7d5e] mb-6">
-              Respuestas a tus consultas. Contáctanos para obtener asesoramiento personalizado para tu jardín.
-            </p>
-            <Link href={"/pages/Contacto"}><Button className="bg-[#5a8c42] hover:bg-[#3c5a2d] text-white">Hacer una consulta</Button></Link>
           </div>
-        </div>
       </div>
     </section>
   )
