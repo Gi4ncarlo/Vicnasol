@@ -34,7 +34,7 @@ const Services = () => {
       
       <div className="fixed w-full">
         <nav className="text-center p-4 w-full bg-gradient-to-r from-green-600 to-green-100 opacity-90 mb-12">
-          <ul className="flex justify-center space-x-6 text-sm text-white text-lg lg:text-2xl">
+          <ul className="flex justify-center space-x-6 sm:text-sm text-white text-lg lg:text-2xl">
             <li>
               <a href="#MantenimientoJ" className="hover:text-green-300 transition-colors duration-300">
                 Mantenimiento de Jardines
@@ -69,7 +69,7 @@ const Services = () => {
               Mantener tu jardín en perfecto estado es nuestra prioridad. Ofrecemos servicios de poda, fertilización y cuidado integral para asegurar que tu espacio verde luzca siempre impecable. Con técnicas avanzadas y un equipo experto, cuidamos cada detalle.
             </p>
           </div>
-            <div className='grid grid-cols-2 grid-rows-2 gap-2 lg:grid lg:grid-cols-2 lg:grid lg:grid-rows-2 lg:gap-2 lg:p-6 lg:shadow-xl lg:rounded-lg'>
+            <div className='grid grid-cols-2 grid-rows-2 gap-2 lg:grid lg:grid-cols-2 lg:grid-rows-2 lg:gap-2 lg:p-6 lg:shadow-xl lg:rounded-lg'>
             <Image
               src="/images/fondo_contacto.jpg"
               alt="Mantenimiento de jardines"
@@ -118,7 +118,7 @@ const Services = () => {
               Transformamos tus espacios con proyectos de paisajismo que combinan creatividad, funcionalidad y estética. Diseñamos jardines que no solo embellecen, sino que también optimizan el uso del terreno y la sostenibilidad del entorno.
             </p>
           </div>
-          <div className='grid grid-cols-2 grid-rows-2 gap-2 lg:grid lg:grid-cols-2 lg:grid lg:grid-rows-2 lg:gap-2 lg:p-6 lg:shadow-xl lg:rounded-lg'>
+          <div className='grid grid-cols-2 grid-rows-2 gap-2 lg:grid lg:grid-cols-2 lg:grid-rows-2 lg:gap-2 lg:p-6 lg:shadow-xl lg:rounded-lg'>
             <Image
               src="/images/fondo_contacto.jpg"
               alt="Mantenimiento de jardines"
@@ -167,7 +167,7 @@ const Services = () => {
               Ofrecemos soluciones especializadas para empresas, asegurando que sus espacios verdes reflejen profesionalismo y compromiso con el medio ambiente. Nos encargamos del diseño, instalación y mantenimiento de áreas verdes corporativas.
             </p>
           </div>
-          <div className='grid grid-cols-2 grid-rows-2 gap-2 lg:grid lg:grid-cols-2 lg:grid lg:grid-rows-2 lg:gap-2 lg:p-6 lg:shadow-xl lg:rounded-lg'>
+          <div className='grid grid-cols-2 grid-rows-2 gap-2 lg:grid lg:grid-cols-2 lg:grid-rows-2 lg:gap-2 lg:p-6 lg:shadow-xl lg:rounded-lg'>
             <Image
               src="/images/fondo_contacto.jpg"
               alt="Mantenimiento de jardines"
@@ -216,7 +216,7 @@ const Services = () => {
               Instalamos sistemas de riego eficientes que se adaptan a las necesidades de tu jardín o área verde. Automatización y optimización del agua garantizan que cada planta reciba la cantidad exacta de hidratación.
             </p>
           </div>
-          <div className='grid grid-cols-2 grid-rows-2 gap-2 lg:grid lg:grid-cols-2 lg:grid lg:grid-rows-2 lg:gap-2 lg:p-6 lg:shadow-xl lg:rounded-lg'>
+          <div className='grid grid-cols-2 grid-rows-2 gap-2 lg:grid lg:grid-cols-2 lg:grid-rows-2 lg:gap-2 lg:p-6 lg:shadow-xl lg:rounded-lg'>
             <Image
               src="/images/fondo_contacto.jpg"
               alt="Mantenimiento de jardines"
