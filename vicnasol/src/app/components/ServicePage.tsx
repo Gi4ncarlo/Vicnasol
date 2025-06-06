@@ -7,11 +7,12 @@ import { Scissors, Sprout, PenTool, Waves, Droplets, TreePine, Flower, Phone, Ma
   const servicios = [
     {
       id: 1,
-      titulo: "Podadura Profesional",
+      titulo: "Poda Profesional",
       descripcion: "Podadura especializada de árboles, arbustos y setos para mantener la salud y forma de tus plantas.",
       icon: Scissors,
       caracteristicas: ["Podadura de formación", "Podadura de mantenimiento", "Eliminación de ramas secas"],
       color: "bg-green-50 border-green-200",
+      link: "Poda"
     },
     {
       id: 2,
@@ -20,6 +21,7 @@ import { Scissors, Sprout, PenTool, Waves, Droplets, TreePine, Flower, Phone, Ma
       icon: Sprout,
       caracteristicas: ["Análisis de suelo", "Selección de plantas", "Plantación profesional"],
       color: "bg-emerald-50 border-emerald-200",
+      link: "PlantacionYSiembra"
     },
     {
       id: 3,
@@ -28,6 +30,7 @@ import { Scissors, Sprout, PenTool, Waves, Droplets, TreePine, Flower, Phone, Ma
       icon: PenTool,
       caracteristicas: ["Diseño 3D", "Planos detallados", "Selección de materiales"],
       color: "bg-green-50 border-green-200",
+      link: "DisenioDeJardines"
     },
     {
       id: 4,
@@ -36,6 +39,7 @@ import { Scissors, Sprout, PenTool, Waves, Droplets, TreePine, Flower, Phone, Ma
       icon: Waves,
       caracteristicas: ["Limpieza regular", "Control químico", "Paisajismo acuático"],
       color: "bg-emerald-50 border-emerald-200",
+       link: "MantenimientoPiscinas"
     },
     {
       id: 5,
@@ -44,6 +48,7 @@ import { Scissors, Sprout, PenTool, Waves, Droplets, TreePine, Flower, Phone, Ma
       icon: Droplets,
       caracteristicas: ["Riego automático", "Riego por goteo", "Programación inteligente"],
       color: "bg-green-50 border-green-200",
+       link: "Riego"
     },
     {
       id: 6,
@@ -52,7 +57,36 @@ import { Scissors, Sprout, PenTool, Waves, Droplets, TreePine, Flower, Phone, Ma
       icon: Flower,
       caracteristicas: ["Plantas ornamentales", "Flores de temporada", "Arreglos decorativos"],
       color: "bg-emerald-50 border-emerald-200",
+       link: "JardineriaOrnamental"
     },
+    {
+      id: 8,
+      titulo: "Mantenimiento de Jardines",
+      descripcion: "Servicios regulares de mantenimiento para mantener tu jardín en óptimas condiciones.",
+      icon: Flower,
+      caracteristicas: ["Plantas ornamentales", "Flores de temporada", "Arreglos decorativos"],
+      color: "bg-emerald-50 border-emerald-200",
+       link: "MantenimientoJardines"
+    },
+    {
+      id: 8,
+      titulo: "Ejecucion de obras y Proyectos",
+      descripcion: "Diseño y ejecución de proyectos de jardinería a medida, adaptados a tus necesidades.",
+      icon: Flower,
+      caracteristicas: ["Plantas ornamentales", "Flores de temporada", "Arreglos decorativos"],
+      color: "bg-emerald-50 border-emerald-200",
+       link: "Obras"
+    },
+    {
+      id: 9,
+      titulo: "Control de Plagas y Sanidad de plantas y cesped",
+      descripcion: "",
+      icon: Flower,
+      caracteristicas: ["Plantas ornamentales", "Flores de temporada", "Arreglos decorativos"],
+      color: "bg-emerald-50 border-emerald-200",
+       link: "Plagas"
+    },
+
   ]
   
   return (
@@ -120,7 +154,9 @@ import { Scissors, Sprout, PenTool, Waves, Droplets, TreePine, Flower, Phone, Ma
                     </ul>
                   </CardContent>
                   <CardFooter className="pt-0">
+                    <Link href={`pages/Servicios/${servicio.link}`}>
                     <Button className="w-full bg-green-600 hover:bg-green-700">Más Información</Button>
+                    </Link>
                   </CardFooter>
                 </Card>
               )
