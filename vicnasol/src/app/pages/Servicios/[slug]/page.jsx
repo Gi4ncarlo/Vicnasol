@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import { servicios } from "@/app/Data/services";
-import Image from "next/image"
-import { CheckCircle } from "lucide-react"
+import Image from "next/image";
+import { CheckCircle } from "lucide-react";
 
 export default function ServicioPage({ params }) {
   const { slug } = params;
@@ -14,7 +14,7 @@ export default function ServicioPage({ params }) {
 
   return (
     <div className="min-h-screen bg-white p-6 text-gray-800 mt-24">
-      <div className="max-w-3xl mx-auto">
+      {/* <div className="max-w-3xl mx-auto">
         <div className="flex items-center gap-4 mb-4">
           <IconComponent className="h-10 w-10 text-green-600" />
           <h1 className="text-3xl font-bold">{servicio.titulo}</h1>
@@ -25,13 +25,13 @@ export default function ServicioPage({ params }) {
             <li key={i}>{item}</li>
           ))}
         </ul>
-      </div>
-            <main className="flex-1">
+      </div> */}
+      <main className="flex-1">
         {/* Hero Section */}
         <section className="relative py-20 lg:py-32">
           <div className="absolute inset-0 z-0">
             <Image
-              src="/images/112.jpg"
+              src={servicio.banner}
               alt="Diseño de jardín profesional"
               fill
               className="object-cover brightness-[0.4]"
@@ -46,8 +46,7 @@ export default function ServicioPage({ params }) {
               <p className="text-xl mb-8 text-gray-200">
                 {servicio.descripcionCorta}
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-              </div>
+              <div className="flex flex-col sm:flex-row gap-4"></div>
             </div>
           </div>
         </section>
@@ -57,7 +56,9 @@ export default function ServicioPage({ params }) {
           <div className="container">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="text-3xl font-bold mb-6">¿Qué incluye nuestro servicio de diseño?</h2>
+                <h2 className="text-3xl font-bold mb-6">
+                  ¿Qué incluye nuestro servicio?
+                </h2>
                 <p className="text-lg text-muted-foreground mb-6">
                   {servicio.descripcionLarga}
                 </p>
@@ -65,36 +66,48 @@ export default function ServicioPage({ params }) {
                   <div className="flex items-start">
                     <CheckCircle className="h-6 w-6 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
                     <div>
-                      <h3 className="font-semibold mb-1">{servicio.keyPoints[0]}</h3>
+                      <h3 className="font-semibold mb-1">
+                        {servicio.keyPoints[0]}
+                      </h3>
                       <p className="text-muted-foreground">
-                        Analizamos su espacio, estilo de vida y preferencias para crear un diseño único.
+                        Analizamos su espacio, estilo de vida y preferencias
+                        para crear un diseño único.
                       </p>
                     </div>
                   </div>
                   <div className="flex items-start">
                     <CheckCircle className="h-6 w-6 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
                     <div>
-                      <h3 className="font-semibold mb-1">{servicio.keyPoints[1]}</h3>
+                      <h3 className="font-semibold mb-1">
+                        {servicio.keyPoints[1]}
+                      </h3>
                       <p className="text-muted-foreground">
-                        Visualice su futuro jardín con renderizados realistas antes de la implementación.
+                        Visualice su futuro jardín con renderizados realistas
+                        antes de la implementación.
                       </p>
                     </div>
                   </div>
                   <div className="flex items-start">
                     <CheckCircle className="h-6 w-6 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
                     <div>
-                      <h3 className="font-semibold mb-1">{servicio.keyPoints[2]}</h3>
+                      <h3 className="font-semibold mb-1">
+                        {servicio.keyPoints[2]}
+                      </h3>
                       <p className="text-muted-foreground">
-                        Elegimos especies adaptadas al clima local para garantizar un jardín sostenible.
+                        Elegimos especies adaptadas al clima local para
+                        garantizar un jardín sostenible.
                       </p>
                     </div>
                   </div>
                   <div className="flex items-start">
                     <CheckCircle className="h-6 w-6 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
                     <div>
-                      <h3 className="font-semibold mb-1">{servicio.keyPoints[3]}</h3>
+                      <h3 className="font-semibold mb-1">
+                        {servicio.keyPoints[3]}
+                      </h3>
                       <p className="text-muted-foreground">
-                        Nos encargamos de toda la construcción, plantación e instalación de elementos.
+                        Nos encargamos de toda la construcción, plantación e
+                        instalación de elementos.
                       </p>
                     </div>
                   </div>
@@ -102,7 +115,7 @@ export default function ServicioPage({ params }) {
               </div>
               <div className="relative">
                 <Image
-                  src="/placeholder.svg?height=600&width=800"
+                  src={servicio.imgPortada}
                   alt="Proceso de diseño de jardín"
                   width={800}
                   height={600}
@@ -117,10 +130,12 @@ export default function ServicioPage({ params }) {
         <section className="py-16 bg-gray-50">
           <div className="container">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">Nuestro proceso de trabajo</h2>
+              <h2 className="text-3xl font-bold mb-4">
+                Nuestro proceso de trabajo
+              </h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
-                Seguimos un proceso estructurado y transparente para asegurar que su jardín supere todas sus
-                expectativas.
+                Seguimos un proceso estructurado y transparente para asegurar
+                que su jardín supere todas sus expectativas.
               </p>
             </div>
 
@@ -132,8 +147,8 @@ export default function ServicioPage({ params }) {
                 </div>
                 <h3 className="text-xl font-bold mb-2">Consulta inicial</h3>
                 <p className="text-muted-foreground">
-                  Visitamos su propiedad para evaluar el espacio, discutir sus ideas y entender sus necesidades
-                  específicas.
+                  Visitamos su propiedad para evaluar el espacio, discutir sus
+                  ideas y entender sus necesidades específicas.
                 </p>
               </div>
 
@@ -144,7 +159,8 @@ export default function ServicioPage({ params }) {
                 </div>
                 <h3 className="text-xl font-bold mb-2">Diseño conceptual</h3>
                 <p className="text-muted-foreground">
-                  Creamos bocetos iniciales y un plan maestro que incorpora todos los elementos deseados.
+                  Creamos bocetos iniciales y un plan maestro que incorpora
+                  todos los elementos deseados.
                 </p>
               </div>
 
@@ -155,7 +171,8 @@ export default function ServicioPage({ params }) {
                 </div>
                 <h3 className="text-xl font-bold mb-2">Presentación 3D</h3>
                 <p className="text-muted-foreground">
-                  Le mostramos renders fotorrealistas de su futuro jardín para que pueda visualizar el resultado final.
+                  Le mostramos renders fotorrealistas de su futuro jardín para
+                  que pueda visualizar el resultado final.
                 </p>
               </div>
 
@@ -166,7 +183,8 @@ export default function ServicioPage({ params }) {
                 </div>
                 <h3 className="text-xl font-bold mb-2">Implementación</h3>
                 <p className="text-muted-foreground">
-                  Ejecutamos el proyecto con precisión, cuidando cada detalle hasta completar su jardín de ensueño.
+                  Ejecutamos el proyecto con precisión, cuidando cada detalle
+                  hasta completar su jardín de ensueño.
                 </p>
               </div>
             </div>
@@ -177,128 +195,83 @@ export default function ServicioPage({ params }) {
         <section className="py-16 bg-white">
           <div className="container">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">Proyectos de diseño realizados</h2>
+              <h2 className="text-3xl font-bold mb-4">
+                Proyectos de diseño realizados
+              </h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
-                Explore algunos de nuestros diseños más destacados y vea cómo hemos transformado espacios únicos.
+                Explore algunos de nuestros diseños más destacados y vea cómo
+                hemos transformado espacios únicos.
               </p>
             </div>
 
             {/* Proyecto destacado */}
-            <div className="mb-12">
-            </div>
+            <div className="mb-12"></div>
 
             {/* Galería de imágenes */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div className="relative aspect-square overflow-hidden rounded-lg group">
-                <Image
-                  src="/placeholder.svg?height=400&width=400"
-                  alt="Jardín mediterráneo"
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                  <div className="p-4 text-white">
-                    <h4 className="font-semibold">Jardín Mediterráneo</h4>
-                    <p className="text-sm">Diseño con plantas aromáticas</p>
-                  </div>
-                </div>
+                {servicio.album.map((imagen,index ) => ( 
+              <div key={index} className="relative aspect-square overflow-hidden rounded-lg group">
+                  <Image
+                    key={index}
+                    src={imagen}
+                    alt={`Imagen ${index + 1}`}
+                    fill
+                    className="object-cover group-hover:scale-110 transition duration-500"
+                  />
               </div>
+                ))}
 
-              <div className="relative aspect-square overflow-hidden rounded-lg group">
-                <Image
-                  src="/placeholder.svg?height=400&width=400"
-                  alt="Jardín vertical"
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                  <div className="p-4 text-white">
-                    <h4 className="font-semibold">Jardín Vertical</h4>
-                    <p className="text-sm">Solución para espacios pequeños</p>
-                  </div>
-                </div>
-              </div>
+            
 
-              <div className="relative aspect-square overflow-hidden rounded-lg group">
-                <Image
-                  src="/placeholder.svg?height=400&width=400"
-                  alt="Jardín japonés"
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                  <div className="p-4 text-white">
-                    <h4 className="font-semibold">Jardín Zen</h4>
-                    <p className="text-sm">Espacio de meditación y paz</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="relative aspect-square overflow-hidden rounded-lg group">
-                <Image
-                  src="/placeholder.svg?height=400&width=400"
-                  alt="Jardín familiar"
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                  <div className="p-4 text-white">
-                    <h4 className="font-semibold">Jardín Familiar</h4>
-                    <p className="text-sm">Espacio seguro para niños</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="relative aspect-square overflow-hidden rounded-lg group">
-                <Image
-                  src="/placeholder.svg?height=400&width=400"
-                  alt="Jardín de rocas"
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                  <div className="p-4 text-white">
-                    <h4 className="font-semibold">Jardín de Rocas</h4>
-                    <p className="text-sm">Bajo mantenimiento</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="relative aspect-square overflow-hidden rounded-lg group">
-                <Image
-                  src="/placeholder.svg?height=400&width=400"
-                  alt="Jardín urbano"
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                  <div className="p-4 text-white">
-                    <h4 className="font-semibold">Jardín Urbano</h4>
-                    <p className="text-sm">Terraza en la ciudad</p>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </section>
 
         {/* Testimonios específicos */}
-        <section className="py-16 bg-gray-50">
-          <div className="container">
+        <section className="py-16 bg-gray-50 mx-auto">
+          <div className="container mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">Lo que dicen nuestros clientes</h2>
+              <h2 className="text-3xl font-bold mb-4">
+                Lo que dicen nuestros clientes
+              </h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
-                Testimonios reales de clientes que han confiado en nosotros para el diseño de sus jardines.
+                Testimonios reales de clientes que han confiado en nosotros para
+                el diseño de sus jardines.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {/* Testimonio 1 */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:w-[900px] md:w-[740px] xl:w-[1200px] mx-auto">
+              {servicio.clientes.map((cliente, index) => (
+                <div
+                  key={index}
+                  className="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow"
+                >
+                  <div className="flex items-center mb-4">
+                    <Image
+                      src={cliente.imagen}
+                      alt={cliente.nombre}
+                      width={50}
+                      height={50}
+                      className="rounded-full mr-4"
+                    />
+                    <div className="grid grid-cols-2 gap-20">
+                      <div className="text-gray-800">
+                        <h3 className="font-semibold">{cliente.nombre}</h3>
+                      </div>
+                      <div>
+                        <p className="text-sm text-muted-foreground ">
+                          {cliente.estrellas}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <p className="text-gray-700">{cliente.comentario}</p>
+                </div>
+              ))}
             </div>
           </div>
         </section>
-        </main>
+      </main>
     </div>
   );
 }
-
