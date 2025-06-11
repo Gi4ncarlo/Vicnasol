@@ -19,7 +19,7 @@ const Home = () => {
       {/* HERO */}
       <section className="relative h-screen bg-black">
         <Image
-          src="/images/fondopagprincipal.jpg"
+          src="/images/FondoPrinci.jpeg"
           alt="Jardinería Vicnasol"
           fill
           className="object-cover opacity-60"
