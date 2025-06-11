@@ -1,88 +1,77 @@
-"use client";
+"use client"
 
-import { useEffect, useState } from "react";
-import Link from "next/link";
-import { HiMenu, HiX } from "react-icons/hi"; 
+import { useState } from "react"
+import Link from "next/link"
 
-export default function Navbar() {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false); 
+export default function VicnasolNavbar() {
+  const [dropdownOpen, setDropdownOpen] = useState(false)
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 0);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+  const servicios = [
+    { id: 1, titulo: "Poda Profesional", link: "Poda" },
+    { id: 2, titulo: "Plantación y Siembra", link: "PlantacionYSiembra" },
+    { id: 3, titulo: "Diseño de Jardines", link: "DisenioDeJardines" },
+    { id: 4, titulo: "Mantenimiento de Piscinas", link: "MantenimientoPiscinas" },
+    { id: 5, titulo: "Sistemas de Riego", link: "Riego" },
+    { id: 6, titulo: "Jardinería Ornamental", link: "JardineriaOrnamental" },
+    { id: 7, titulo: "Mantenimiento de Jardines", link: "MantenimientoJardines" },
+    { id: 8, titulo: "Ejecución de obras y Proyectos", link: "Obras" },
+    { id: 9, titulo: "Control de Plagas y Sanidad", link: "Plagas" },
+  ]
 
   return (
-    <nav
-      className={`fixed z-10 top-0 w-full transition-all duration-500 ${
-        isScrolled
-          ? "bg-gradient-to-r from-green-900 to-green-700 opacity-90 py-4 lg:py-3"
-          : "bg-gradient-to-r from-green-900 to-green-700 py-3 lg:py-5"
-      }`}
-    >
-      <div className="container flex items-center justify-between mx-auto px-2 lg:py-1 lg:px-4 lg:py-2">
-        <div
-          className={`text-white text-lg lg:text-3xl font-bold font-cinzel ${
-            isScrolled ? "text-base lg:text-2xl" : ""
-          }`}
-        >
-          <Link href="/">VICNASOL</Link>
-        </div>
-        
-        <div className="lg:hidden">
-          <button onClick={toggleMenu} className="text-white text-lg lg:text-3xl">
-            {isMenuOpen ? <HiX /> : <HiMenu />} 
-          </button>
+    <nav className="bg-green-800 text-white shadow-md relative z-50">
+      <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+        {/* Logo + Nombre */}
+        <div className="flex items-center space-x-3">
+          <a
+            href="/"
+            className="text-2xl font-bold text-white"
+          >
+            VICNASOL
+          </a>
         </div>
 
-        <ul
-          className={`hidden lg:flex space-x-6 text-white text-base lg:text-xl font-roboto ${
-            isScrolled ? "text-[10px] lg:text-[18px] duration-700" : ""
-          }`}
-        >
-          <li className="hover:-translate-y-1 hover:underline">
-            <Link href="/pages/Proyectos">Proyectos</Link>
-          </li>
-          <li className="hover:-translate-y-1 hover:underline">
-            <Link href="/pages/Servicios">Servicios</Link>
-          </li>
-          <li className="hover:-translate-y-1 hover:underline">
-            <Link href="/pages/SobreNosotros">Sobre Nosotros</Link>
-          </li>
-          <li className="hover:-translate-y-1 hover:underline">
-            <Link href="/pages/Contacto">Contacto</Link>
-          </li>
-        </ul>
+        {/* Navegación */}
+        <div className="flex space-x-6 items-center relative">
+          <a href="/pages/Proyectos" className="hover:text-gray-200 transition">Proyectos</a>
 
-        {isMenuOpen && (
-          <ul className="absolute top-16 right-4 bg-green-700 text-white text-base lg:text-xl font-roboto space-y-4 p-4 rounded-lg lg:hidden">
-            <li className="hover:-translate-y-1 hover:underline">
-              <Link href="/pages/Proyectos">Proyectos</Link>
-            </li>
-            <li className="hover:-translate-y-1 hover:underline">
-              <Link href="/pages/Servicios">Servicios</Link>
-            </li>
-            <li className="hover:-translate-y-1 hover:underline">
-              <Link href="/pages/SobreNosotros">Sobre Nosotros</Link>
-            </li>
-            <li className="hover:-translate-y-1 hover:underline">
-              <Link href="/pages/Contacto">Contacto</Link>
-            </li>
-          </ul>
-        )}
+          {/* Dropdown Servicios */}
+          <div
+            className="relative"
+            onClick={() => setDropdownOpen(true)}
+          >
+            <button
+              className="hover:text-gray-200 transition focus:outline-none"
+            >
+              Servicios ▾
+            </button>
+            {dropdownOpen && (
+              <div className="absolute left-0 mt-2 bg-white text-black rounded-md shadow-lg z-50 w-64 max-h-96 overflow-y-auto">
+                {servicios.map(servicio => (
+                  <Link
+                    key={servicio.id}
+                    href={`/pages/Servicios/${servicio.link}`}
+                    className="block px-4 py-2 hover:bg-gray-100 transition"
+                    onClick={() => setDropdownOpen(false)}
+                  >
+                    {servicio.titulo}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+
+          <a href="pages/SobreNosotros" className="hover:text-gray-200 transition">Sobre Nosotros</a>
+
+          {/* Botón de Contacto */}
+          <a
+            href="/pages/Contacto"
+            className="bg-white text-green-800 px-4 py-2 rounded-md font-semibold hover:bg-gray-100 transition"
+          >
+            Contacto
+          </a>
+        </div>
       </div>
     </nav>
-  );
+  )
 }
-
