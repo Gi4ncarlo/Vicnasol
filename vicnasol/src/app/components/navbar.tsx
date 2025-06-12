@@ -61,7 +61,7 @@ export default function VicnasolNavbar() {
             )}
           </div>
 
-          <a href="pages/SobreNosotros" className="hover:text-gray-200 transition">Sobre Nosotros</a>
+          <a href="/pages/SobreNosotros" className="hover:text-gray-200 transition">Sobre Nosotros</a>
 
           {/* Botón de Contacto */}
           <a
