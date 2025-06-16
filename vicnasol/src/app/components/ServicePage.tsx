@@ -191,19 +191,19 @@ export default function ServiciosPage() {
         "Mantenimiento preventivo y correctivo.",
       ],
       clientes: [
-      {
-        nombre: "Beatriz Salinas",
-        estrellas: "⭐⭐⭐⭐⭐",
-        comentario: "Mi piscina quedó como nueva. Muy atentos al detalle.",
-        fecha: "2024"
-      },
-      {
-        nombre: "Sergio Paredes",
-        estrellas: "⭐⭐⭐⭐",
-        comentario: "Buen trabajo y buena disposición. ¡Gracias!",
-        fecha: "2023"
-      }
-    ]
+        {
+          nombre: "Beatriz Salinas",
+          estrellas: "⭐⭐⭐⭐⭐",
+          comentario: "Mi piscina quedó como nueva. Muy atentos al detalle.",
+          fecha: "2024",
+        },
+        {
+          nombre: "Sergio Paredes",
+          estrellas: "⭐⭐⭐⭐",
+          comentario: "Buen trabajo y buena disposición. ¡Gracias!",
+          fecha: "2023",
+        },
+      ],
     },
     {
       id: 6,
@@ -226,19 +226,20 @@ export default function ServiciosPage() {
         "Mantenimiento y renovación periódica.",
       ],
       clientes: [
-      {
-        nombre: "Natalia Vázquez",
-        estrellas: "⭐⭐⭐⭐⭐",
-        comentario: "Desde que instalaron el sistema, ahorro mucha agua.",
-        fecha: "2024"
-      },
-      {
-        nombre: "Eduardo Lara",
-        estrellas: "⭐⭐⭐",
-        comentario: "El sistema funciona bien, aunque tuve que llamar para ajustar los horarios.",
-        fecha: "2022"
-      }
-    ]
+        {
+          nombre: "Natalia Vázquez",
+          estrellas: "⭐⭐⭐⭐⭐",
+          comentario: "Desde que instalaron el sistema, ahorro mucha agua.",
+          fecha: "2024",
+        },
+        {
+          nombre: "Eduardo Lara",
+          estrellas: "⭐⭐⭐",
+          comentario:
+            "El sistema funciona bien, aunque tuve que llamar para ajustar los horarios.",
+          fecha: "2022",
+        },
+      ],
     },
     {
       id: 7,
@@ -300,13 +301,15 @@ export default function ServiciosPage() {
         {
           nombre: "Juan Pérez",
           estrellas: "⭐⭐⭐",
-          comentario: "El proyecto fue bien ejecutado, aunque hubo algunos retrasos.",
+          comentario:
+            "El proyecto fue bien ejecutado, aunque hubo algunos retrasos.",
           fecha: "2024",
         },
         {
           nombre: "Lucía Fernández",
           estrellas: "⭐⭐⭐⭐",
-          comentario: "El equipo fue muy profesional y cumplió con lo prometido.",
+          comentario:
+            "El equipo fue muy profesional y cumplió con lo prometido.",
           fecha: "2024",
         },
       ],
@@ -336,13 +339,15 @@ export default function ServiciosPage() {
         {
           nombre: "Carlos Ramírez",
           estrellas: "⭐⭐⭐⭐",
-          comentario: "El control de plagas fue efectivo, mi jardín está sano y bonito.",
+          comentario:
+            "El control de plagas fue efectivo, mi jardín está sano y bonito.",
           fecha: "2024",
         },
         {
           nombre: "Sofía Martínez",
           estrellas: "⭐⭐⭐⭐⭐",
-          comentario: "El servicio fue excelente, me ayudaron a identificar y tratar las plagas rápidamente.",
+          comentario:
+            "El servicio fue excelente, me ayudaron a identificar y tratar las plagas rápidamente.",
           fecha: "2024",
         },
       ],
@@ -402,9 +407,9 @@ export default function ServiciosPage() {
               return (
                 <Card
                   key={servicio.id}
-                  className={`${servicio.color} hover:shadow-lg transition-all duration-300 hover:-translate-y-1`}
+                  className={`${servicio.color} hover:shadow-lg transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between h-full min-h-[400px]`}
                 >
-                  <CardHeader>
+                  <CardHeader className="flex-grow">
                     <div className="flex items-center justify-between mb-2">
                       <IconComponent className="h-8 w-8 text-green-600" />
                     </div>
@@ -414,10 +419,11 @@ export default function ServiciosPage() {
                     <CardDescription className="text-gray-800 font-bold">
                       {servicio.descripcionCorta}
                     </CardDescription>
-                    <CardDescription className="text-gray-600">
+                    <CardDescription className="text-gray-600 mt-2 line-clamp-4">
                       {servicio.descripcionLarga}
                     </CardDescription>
                   </CardHeader>
+
                   <CardContent>
                     <ul className="space-y-2">
                       {servicio.caracteristicas.map((caracteristica, index) => (
@@ -431,7 +437,8 @@ export default function ServiciosPage() {
                       ))}
                     </ul>
                   </CardContent>
-                  <CardFooter className="pt-0">
+
+                  <CardFooter className="mt-auto">
                     <Link href={`pages/Servicios/${servicio.link}`}>
                       <Button className="w-full bg-green-600 hover:bg-green-700">
                         Más Información
