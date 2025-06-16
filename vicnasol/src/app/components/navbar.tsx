@@ -1,10 +1,11 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useRef, useEffect } from "react"
 import Link from "next/link"
 
 export default function VicnasolNavbar() {
   const [dropdownOpen, setDropdownOpen] = useState(false)
+  const dropdownRef = useRef(null)
 
   const servicios = [
     { id: 1, titulo: "Poda Profesional", link: "Poda" },
@@ -18,29 +19,38 @@ export default function VicnasolNavbar() {
     { id: 9, titulo: "Control de Plagas y Sanidad", link: "Plagas" },
   ]
 
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setDropdownOpen(false)
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside)
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside)
+    }
+  }, [])
+
   return (
     <nav className="bg-green-800 text-white shadow-md relative z-50">
       <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
         {/* Logo + Nombre */}
         <div className="flex items-center space-x-3">
-          <a
-            href="/"
-            className="text-2xl font-bold text-white"
-          >
+          <Link href="/" className="text-2xl font-bold text-white">
             VICNASOL
-          </a>
+          </Link>
         </div>
 
         {/* Navegación */}
         <div className="flex space-x-6 items-center relative">
-          <a href="/pages/Proyectos" className="hover:text-gray-200 transition">Proyectos</a>
+          <Link href="/pages/Proyectos" className="hover:text-gray-200 transition">
+            Proyectos
+          </Link>
 
           {/* Dropdown Servicios */}
-          <div
-            className="relative"
-            onClick={() => setDropdownOpen(true)}
-          >
+          <div className="relative" ref={dropdownRef}>
             <button
+              onClick={() => setDropdownOpen(prev => !prev)}
               className="hover:text-gray-200 transition focus:outline-none"
             >
               Servicios ▾
@@ -61,15 +71,16 @@ export default function VicnasolNavbar() {
             )}
           </div>
 
-          <a href="/pages/SobreNosotros" className="hover:text-gray-200 transition">Sobre Nosotros</a>
+          <Link href="/pages/SobreNosotros" className="hover:text-gray-200 transition">
+            Sobre Nosotros
+          </Link>
 
-          {/* Botón de Contacto */}
-          <a
+          <Link
             href="/pages/Contacto"
             className="bg-white text-green-800 px-4 py-2 rounded-md font-semibold hover:bg-gray-100 transition"
           >
             Contacto
-          </a>
+          </Link>
         </div>
       </div>
     </nav>

@@ -8,9 +8,7 @@ import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
 import { Button } from "@/app/components/ui/button"
-import Link from "next/link"
 import { Phone, Mail, Shield, Shield as Tool} from "lucide-react"
-import GardenServicesSection from "./components/garden-services-section";
 import ServicePage from "@/app/components/ServicePage"
 
 const Home = () => {
