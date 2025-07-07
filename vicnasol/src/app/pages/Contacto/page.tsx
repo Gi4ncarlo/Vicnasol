@@ -40,24 +40,39 @@ export default function ContactPage() {
     });
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    // Aquí iría la lógica para enviar el email
-    console.log("Formulario enviado:", formData);
-    setIsSubmitted(true);
-
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        service: "",
-        message: "",
-      });
-    }, 3000);
-  };
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  
+  try {
+    const response = await fetch('https://formspree.io/f/mwpbdpak', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    });
+    
+    if (response.ok) {
+      setIsSubmitted(true);
+      // Reset form
+      setTimeout(() => {
+        setIsSubmitted(false);
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          service: "",
+          message: "",
+        });
+      }, 3000);
+    } else {
+      throw new Error('Error en la respuesta');
+    }
+  } catch (error) {
+    console.error('Error:', error);
+    alert('Error al enviar el formulario');
+  }
+};
 
   const openWhatsApp = () => {
     const message = encodeURIComponent(

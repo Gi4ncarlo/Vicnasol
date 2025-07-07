@@ -13,7 +13,7 @@ export default function ServicioPage({ params }) {
   const IconComponent = servicio.icon;
 
   return (
-    <div className="min-h-screen bg-white p-6 text-gray-800 mt-24">
+    <div className="min-h-screen bg-white text-gray-800">
       {/* <div className="max-w-3xl mx-auto">
         <div className="flex items-center gap-4 mb-4">
           <IconComponent className="h-10 w-10 text-green-600" />
@@ -29,17 +29,17 @@ export default function ServicioPage({ params }) {
       <main className="flex-1">
         {/* Hero Section */}
         <section className="relative py-20 lg:py-32">
-          <div className="absolute inset-0 z-0">
+          <div className="">
             <Image
               src={servicio.banner}
               alt="Diseño de jardín profesional"
               fill
-              className="object-cover brightness-[0.4]"
+              className="object-cover brightness-[0.4] w-full h-full"
               priority
             />
           </div>
           <div className="container relative z-10">
-            <div className="max-w-3xl text-white">
+            <div className="max-w-3xl text-white ml-10">
               <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl mb-6">
                 {servicio.titulo}
               </h1>
@@ -52,8 +52,8 @@ export default function ServicioPage({ params }) {
         </section>
 
         {/* Descripción del Servicio */}
-        <section className="py-16 bg-white">
-          <div className="container">
+        <section className="py-16 bg-white p-6">
+          <div className="container mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <h2 className="text-3xl font-bold mb-6">
@@ -127,8 +127,8 @@ export default function ServicioPage({ params }) {
         </section>
 
         {/* Proceso paso a paso */}
-        <section className="py-16 bg-gray-50">
-          <div className="container">
+        <section className="py-16 bg-gray-50 p-6">
+          <div className="container mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold mb-4">
                 Nuestro proceso de trabajo
@@ -192,8 +192,8 @@ export default function ServicioPage({ params }) {
         </section>
 
         {/* Galería de proyectos */}
-        <section className="py-16 bg-white">
-          <div className="container">
+        <section className="py-16 bg-white p-6">
+          <div className="container mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold mb-4">
                 Proyectos de diseño realizados
