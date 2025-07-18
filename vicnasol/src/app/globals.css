@@ -3,7 +3,7 @@
 @tailwind components;
 @tailwind utilities;
 
-background-image: url('/images/fondo_contacto.jpg');
+
 
 /* main{
     height: 1000px;
@@ -14,6 +14,13 @@ html{
 }
 
 @layer base {
+    h1,h2,h3,h4{
+      @apply font-playfair;
+    }
+
+    p,span,li,a{
+      @apply font-nunito;
+    }
   :root {
 
     --background: 0 0% 100%;
@@ -65,6 +72,8 @@ html{
     --chart-5: 27 87% 67%;
 
     --radius: 0.5rem
+
+}
   }
   .dark {
 
@@ -116,7 +125,7 @@ html{
 
     --chart-5: 340 75% 55%
   }
-}
+
 
 
 
