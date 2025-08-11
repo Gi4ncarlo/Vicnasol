@@ -23,9 +23,8 @@ const services = [
 ];
 
   const stats = [
-    { number: "15+", label: "Años de Experiencia" },
-    { number: "8", label: "Profesionales" },
-    { number: "2", label: "Departamentos" },
+    { number: "20+", label: "Años de Experiencia" },
+    { number: "19", label: "Departamentos" },
     { number: "100%", label: "Satisfacción" },
   ]
 
@@ -43,7 +42,7 @@ const services = [
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">Quiénes Somos</h1>
             <p className="text-xl md:text-2xl text-green-100 leading-relaxed">
-              Transformamos espacios verdes con más de 15 años de experiencia en servicios medioambientales
+              Transformamos espacios verdes con más de 20 años de experiencia en servicios medioambientales
             </p>
           </div>
         </div>
@@ -52,8 +51,8 @@ const services = [
 
       {/* Stats Section */}
       <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="mx-auto px-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="text-4xl md:text-5xl font-bold text-green-700 mb-2">{stat.number}</div>
@@ -69,16 +68,16 @@ const services = [
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">Más de una década cultivando confianza</h2>
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">Más de dos décadas cultivando confianza</h2>
               <div className="prose prose-lg text-gray-700 space-y-6">
                 <p>
-                  <strong>Vicnasol</strong> es una empresa de servicios medioambientales con más de 15 años de
+                  <strong>Vicnasol</strong> es una empresa de servicios medioambientales con más de 20 años de
                   experiencia, ubicada en Carrasco, Montevideo y Ciudad de la Costa, Uruguay. Nos especializamos en
                   todas las labores de jardinería, ofreciendo soluciones a medida para satisfacer las necesidades tanto
                   de personas como de empresas que buscan un servicio de calidad.
                 </p>
                 <p>
-                  Contamos con un equipo de 8 profesionales altamente cualificados, quienes le asesorarán y guiarán en
+                  Contamos con un equipo altamente cualificado, quienes le asesorarán y guiarán en
                   cada etapa de su proyecto, asegurando que cada detalle sea perfecto.
                 </p>
               </div>
