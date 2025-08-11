@@ -27,7 +27,7 @@ export default function ContactPage() {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   // Número de WhatsApp (cambiar por el número real)
-  const whatsappNumber = "23132323322";
+  const whatsappNumber = "+5989447698";
 
   const handleInputChange = (
     e: React.ChangeEvent<
@@ -266,7 +266,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                   <Phone className="h-5 w-5 text-green-600" />
                   <div>
                     <p className="font-medium">Teléfono</p>
-                    <p className="text-gray-600">+54 11 1234-5678</p>
+                    <p className="text-gray-600">+598 94 476 398</p>
                   </div>
                 </div>
 
@@ -274,7 +274,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                   <Mail className="h-5 w-5 text-green-600" />
                   <div>
                     <p className="font-medium">Email</p>
-                    <p className="text-gray-600">info@verdejardines.com</p>
+                    <p className="text-gray-600">vicnasol@hotmail.com</p>
                   </div>
                 </div>
 
@@ -282,16 +282,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                   <MapPin className="h-5 w-5 text-green-600" />
                   <div>
                     <p className="font-medium">Dirección</p>
-                    <p className="text-gray-600">Av. Libertador 1234, CABA</p>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-3">
-                  <Clock className="h-5 w-5 text-green-600" />
-                  <div>
-                    <p className="font-medium">Horarios</p>
-                    <p className="text-gray-600">Lun - Vie: 8:00 - 18:00</p>
-                    <p className="text-gray-600">Sáb: 9:00 - 15:00</p>
+                    <p className="text-gray-600">Buenos Aires M7 S4</p>
                   </div>
                 </div>
               </div>
