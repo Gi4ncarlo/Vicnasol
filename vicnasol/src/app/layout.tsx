@@ -33,7 +33,7 @@ export default function RootLayout({
       </Head>
       <body className={`${playfair.variable} ${nunito.variable}`}>
         <Navbar />
-        <div className="min-h-screen bg-green-50">
+        <div className="min-h-screen min-w-screen bg-green-50">
         {children}
         </div>
         <Footer />
