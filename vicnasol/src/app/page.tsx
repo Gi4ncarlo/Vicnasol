@@ -60,7 +60,7 @@ const Home = () => {
             loop={true}
             navigation={true}
             modules={[FreeMode, Navigation, Thumbs]}
-            className="h-[500px] w-[1200px] rounded-lg mx-auto"
+            className="h-[500px] lg:w-[1200px] rounded-lg mx-auto"
           >
             {[
               "/images/rosas.jpg",
