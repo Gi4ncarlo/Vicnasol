@@ -13,7 +13,7 @@ import ServicePage from "@/app/components/ServicePage";
 
 const Home = () => {
   return (
-    <main className="bg-[#f8f5e6] text-[#2f4f2f]">
+    <main className="bg-[#EDEADE] text-[#2f4f2f]">
       {/* HERO */}
       <section className="relative h-screen bg-black">
         <Image
@@ -82,10 +82,10 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="bg-[#f8f5e6]">
+      <section className="bg-[#EDEADE]">
         {/* Values Section */}
         <div className="relative bg-[#3c5a2d]/10 rounded-2xl p-8 mb-16">
-          <div className="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-[#f8b951] text-[#3c5a2d] font-bold px-6 py-2 rounded-full">
+          <div className="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-[#064E3B] text-[#F9FAFB] font-bold px-6 py-2 rounded-full">
             Nuestros Valores
           </div>
 
@@ -133,7 +133,7 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 bg-green-600">
+      <section className="py-16 px-4 bg-[#15803D]">
         <div className="container mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
             ¿Listo para Transformar tu Jardín?

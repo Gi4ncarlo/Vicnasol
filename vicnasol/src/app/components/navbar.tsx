@@ -6,7 +6,8 @@ import Link from "next/link"
 export default function VicnasolNavbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
-  const dropdownRef = useRef(null);
+ const dropdownRef = useRef<HTMLDivElement | null>(null);
+
 
   const servicios = [
     { id: 1, titulo: "Poda Profesional", link: "Poda" },
@@ -20,17 +21,18 @@ export default function VicnasolNavbar() {
     { id: 9, titulo: "Control de Plagas y Sanidad", link: "Plagas" },
   ]
 
-  // useEffect(() => {
-  //   function handleClickOutside(event : any) {
-  //     if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-  //       setDropdownOpen(false)
-  //     }
-  //   }
-  //   document.addEventListener("mousedown", handleClickOutside)
-  //   return () => {
-  //     document.removeEventListener("mousedown", handleClickOutside)
-  //   }
-  // }, [])
+  useEffect(() => {
+    const handleClickOutside = (event: any) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setServicesOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
     <nav className="bg-green-800 text-white shadow-md relative z-50">
