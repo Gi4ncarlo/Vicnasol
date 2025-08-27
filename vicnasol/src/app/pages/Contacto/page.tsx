@@ -221,8 +221,8 @@ const handleSubmit = async (e: React.FormEvent) => {
               )}
             </div>
             {/* Footer with Logo */}
-              <div className="mt-6 p-4 rounded-b-lg">
-                <Image   src="/images/prueba.jpg"
+              <div className="mt-2 p-4 rounded-b-lg">
+                <Image   src="/images/Imagen Contacto 1.jpg"
                   width={400}
                   height={400}
                   alt="Logo"
