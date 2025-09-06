@@ -250,8 +250,8 @@ export default function ServicioPage({ params }) {
                     <Image
                       src={cliente.imagen}
                       alt={cliente.nombre}
-                      width={50}
-                      height={50}
+                      width={90}
+                      height={90}
                       className="rounded-full mr-4"
                     />
                     <div className="grid grid-cols-2 gap-20">
