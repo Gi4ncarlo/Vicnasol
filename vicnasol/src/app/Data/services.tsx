@@ -28,12 +28,14 @@ export const servicios = [
           estrellas: "⭐⭐⭐⭐",
           comentario: "Muy bueno",
           fecha: "2024",
+          imagen: "/images/Persona3.webp",
         },
         {
           nombre: "Ana Lopez",
           estrellas: "⭐⭐⭐⭐",
           comentario: "Muy bueno",
           fecha: "2024",
+           imagen: "/images/Persona4.webp",
         },
       ],
       banner: "/images/entrada.jpg",
@@ -72,12 +74,14 @@ export const servicios = [
           comentario:
             "El servicio de poda fue excelente, dejaron mis arbustos impecables.",
           fecha: "2023",
+          imagen: `/images/Persona1.webp`,
         },
         {
           nombre: "Carlos Gómez",
           estrellas: "⭐⭐⭐⭐",
           comentario: "Muy profesionales y puntuales. Recomendado.",
           fecha: "2024",
+          imagen: "/images/Persona3.webp",
         },
       ],
      banner: "/images/entrada.jpg",
@@ -116,6 +120,7 @@ export const servicios = [
           comentario:
             "Quedé encantada con las flores que me recomendaron, todo floreció perfecto.",
           fecha: "2024",
+          imagen: `/images/Persona4.webp`,
         },
         {
           nombre: "José Hernández",
@@ -123,6 +128,7 @@ export const servicios = [
           comentario:
             "El trabajo fue correcto, aunque tardaron un poco más de lo previsto.",
           fecha: "2023",
+          imagen: "/images/Persona2.webp",
         },
       ],
      banner: "/images/entrada.jpg",
@@ -160,6 +166,7 @@ export const servicios = [
           estrellas: "⭐⭐⭐⭐⭐",
           comentario: "El diseño fue justo lo que imaginaba. ¡Muy creativos!",
           fecha: "2022",
+          imagen: `/images/Persona1.webp`,
         },
         {
           nombre: "Luis Castillo",
@@ -167,6 +174,7 @@ export const servicios = [
           comentario:
             "El jardín cambió completamente, se nota el trabajo profesional.",
           fecha: "2023",
+          imagen: `/images/Persona2.webp`,
         },
       ],
      banner: "/images/entrada.jpg",
