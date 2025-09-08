@@ -1,11 +1,20 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Playfair_Display, Nunito } from "next/font/google";
 import "./globals.css";
 import Head from "next/head";
 import Navbar from "./components/navbar";
-import Footer from "./footer";
+import Footer from "./components/footer";
 
-const inter = Inter({ subsets: ["latin"] });
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair",
+});
+
+const nunito = Nunito({
+  subsets: ["latin"],
+  variable: "--font-nunito",
+});
 
 export const metadata: Metadata = {
   title: "Vicnasol",
@@ -22,9 +31,9 @@ export default function RootLayout({
       <Head>
       <title>{metadata.title as string}</title>
       </Head>
-      <body className={inter.className}>
+      <body className={`${playfair.variable} ${nunito.variable}`}>
         <Navbar />
-        <div className="min-h-screen bg-green-50">
+        <div className="min-h-screen min-w-screen bg-green-50">
         {children}
         </div>
         <Footer />

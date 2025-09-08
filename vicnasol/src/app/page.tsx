@@ -1,142 +1,172 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Navigation, Thumbs } from "swiper/modules";
-
-import { images } from "../app/lib/images";
-
-//BENTO
-
-import { BentoGridThirdDemo } from "../app/intentoBendo";
-
-//--------
-
-import Link from "next/link";
-
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
+import { Button } from "@/app/components/ui/button";
+import { Phone, Mail, Shield, Shield as Tool } from "lucide-react";
+import ServicePage from "@/app/components/ServicePage";
 
 const Home = () => {
-  const [thumbsSwiper, setThumbsSwiper] = useState(null);
   return (
-    <main className="bg-green-50">
-      {/* <div className="relative w-full h-64 md:h-96 lg:h-[400px] overflow-hidden">
+    <main className="bg-[#EDEADE] text-[#2f4f2f]">
+      {/* HERO */}
+      <section className="relative h-screen bg-black">
         <Image
-          src="/images/fondopagprincipal.jpg"
-          alt="Fondo principal"
-          layout="fill"
-          objectFit="cover"
-          objectPosition="center"
+          src="/images/FondoPrinci.jpeg"
+          alt="Jardinería Vicnasol"
+          fill
+          className="object-cover opacity-60"
         />
-      </div> */}
-      <section className="py-12">
-        <div className="container mx-auto">
+        <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white px-4">
+          <h1 className="text-4xl md:text-6xl font-bold mb-4">VICNASOL</h1>
+          <p className="text-lg md:text-2xl">
+            Transformamos espacios verdes con pasión
+          </p>
+          <a
+            onClick={(e) => {
+              e.preventDefault();
+              const section = document.getElementById("servicios");
+              if (section) {
+                console.log("Scrolling to servicios section", section);
+                section.scrollIntoView({ behavior: "smooth", block: "start" }); // 'start' o 'center'
+              }
+            }}
+            className="mt-6 px-6 py-3 bg-[#3c5a2d] hover:bg-[#2f4f2f] transition rounded text-white cursor-pointer"
+          >
+            Conoce nuestros servicios
+          </a>
+        </div>
+      </section>
+      <div id="servicios" >
+      <ServicePage />
+
+      </div>
+
+      {/* CARRUSEL */}
+      <section
+        className="bg-gradient-to-br from-green-50 to-emerald-50 py-12 lg:mb-16"
+        
+      >
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="text-3xl font-bold mb-6 text-center">
+            Algunos de nuestros Proyectos
+          </h2>
           <Swiper
             loop={true}
-            spaceBetween={10}
             navigation={true}
             modules={[FreeMode, Navigation, Thumbs]}
-            className="h-96 w-full rounded-lg"
+            className="h-[500px] lg:w-[1200px] rounded-lg mx-auto"
           >
-            {images.map((image, index) => (
-              <SwiperSlide key={index}>
-                <div className="flex h-full w-full items-center justify-center">
+            {[
+              "/images/rosas.jpg",
+              "/images/112.jpg",
+              "/images/entrada.jpg",
+            ].map((src, idx) => (
+              <SwiperSlide key={idx}>
+                <div className="relative w-full h-full">
                   <Image
-                    src={image.src}
-                    alt={image.alt}
-                    layout="fill"
-                    className="object-cover"
+                    src={src}
+                    alt={`Proyecto ${idx + 1}`}
+                    fill
+                    className="object-cover h-[500px] w-[1200px]"
                   />
                 </div>
               </SwiperSlide>
             ))}
           </Swiper>
-
-          {/* Thumbnail */}
-          <Swiper
-            loop={true}
-            spaceBetween={12}
-            slidesPerView={2}
-            freeMode={true}
-            watchSlidesProgress={true}
-            modules={[FreeMode, Navigation, Thumbs]}
-            className="thumbs mt-3 h-32 w-full rounded-lg"
-          >
-            {images.map((image, index) => (
-              <SwiperSlide key={index}>
-                <button className="flex h-full w-full items-center justify-center">
-                  <Image
-                    src={image.src}
-                    alt={image.alt}
-                    layout="fill"
-                    className="object-cover"
-                  />
-                </button>
-              </SwiperSlide>
-            ))}
-          </Swiper>
         </div>
       </section>
 
-      <section>
-        <div className="bg-green-800 grid grid-cols-2 gap-10 max-w-screen-3xl max-h-[800px] mx-auto p-8">
-          <div className="bg-white shadow-lg rounded-lg flex flex-col max-h-[600px]">
-            <div className="p-4 flex-grow">
-              <h1 className="text-2xl font-bold text-green-700 mb-4">
-                Empresa Vicnasol de Jardinería
-              </h1>
-
-              <p className="mb-4">
-                Bienvenido a Vicnasol: Tu Socio en Jardinería En Vicnasol nos
-                dedicamos con pasión y dedicación a embellecer y mantener tus
-                espacios verdes. Con años de experiencia en el sector de la
-                jardinería general, ofrecemos servicios de diseño, mantenimiento
-                y construcción de jardines tanto para particulares como para
-                empresas.
-              </p>
-
-              <p className="mb-4">
-                Nuestro compromiso con la calidad se refleja en cada proyecto
-                que emprendemos. Desde el cuidado meticuloso de cada planta
-                hasta el diseño creativo de paisajes, en Vicnasol nos aseguramos
-                de que cada detalle sea perfecto.
-              </p>
-
-              <p className="mb-6">
-                Descubre cómo podemos transformar tu entorno natural con
-                profesionalismo y estilo, para conocer nuestra historia,
-                nuestros valores y el equipo que hace posible Vicnasol.
-              </p>
-            </div>
-
-            <div className=" px-6 py-4">
-              <button className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded w-full">
-                Ver más
-              </button>
-            </div>
+      <section className="bg-[#EDEADE]">
+        {/* Values Section */}
+        <div className="relative bg-[#3c5a2d]/10 rounded-2xl p-8 mb-16">
+          <div className="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-[#064E3B] text-[#F9FAFB] font-bold px-6 py-2 rounded-full">
+            Nuestros Valores
           </div>
-          <div className="w-full h-full shadow-lg rounded-3xl overflow-hidden max-h-[400px]">
-            <Image
-              src="/images/rosas.jpg"
-              alt="Fondo principal"
-              width={1000}
-              height={600}
-              className="w-full h-full object-cover"
-            />
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+            <div className="flex flex-col items-center text-center p-6 bg-white/70 backdrop-blur-sm rounded-xl">
+              <div className="h-16 w-16 rounded-full bg-[#e6eed8] flex items-center justify-center mb-4">
+                <Shield className="h-8 w-8 text-[#5a8c42]" />
+              </div>
+              <h3 className="text-lg font-bold text-[#3c5a2d] mb-2">
+                Compromiso
+              </h3>
+              <p className="text-[#6b7d5e]">
+                Nos destacamos por nuestro compromiso con la calidad y
+                satisfacción del cliente.
+              </p>
+            </div>
+
+            <div className="flex flex-col items-center text-center p-6 bg-white/70 backdrop-blur-sm rounded-xl">
+              <div className="h-16 w-16 rounded-full bg-[#e6eed8] flex items-center justify-center mb-4">
+                <Shield className="h-8 w-8 text-[#5a8c42]" />
+              </div>
+              <h3 className="text-lg font-bold text-[#3c5a2d] mb-2">
+                Confiabilidad
+              </h3>
+              <p className="text-[#6b7d5e]">
+                Brindamos servicios confiables y puntuales, respetando tiempos y
+                acuerdos.
+              </p>
+            </div>
+
+            <div className="flex flex-col items-center text-center p-6 bg-white/70 backdrop-blur-sm rounded-xl">
+              <div className="h-16 w-16 rounded-full bg-[#e6eed8] flex items-center justify-center mb-4">
+                <Tool className="h-8 w-8 text-[#5a8c42]" />
+              </div>
+              <h3 className="text-lg font-bold text-[#3c5a2d] mb-2">
+                Eficiencia
+              </h3>
+              <p className="text-[#6b7d5e]">
+                Profesionales capacitados que trabajan con eficiencia y atención
+                al detalle.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      <hr></hr>
-      
+      {/* CTA Section */}
+      <section className="py-16 px-4 bg-[#15803D]">
+        <div className="container mx-auto text-center">
+          <h2 className="text-3xl font-bold text-white mb-4">
+            ¿Listo para Transformar tu Jardín?
+          </h2>
+          <p className="text-green-100 text-lg mb-8 max-w-2xl mx-auto">
+            Contáctanos hoy mismo para una consulta gratuita y descubre cómo
+            podemos hacer realidad el jardín de tus sueños.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a  href="/pages/Contacto">
+            <Button
+              size="lg"
+              variant="secondary"
+              className="bg-white text-green-600"
+            >
+              <Phone className="mr-2 h-4 w-4" />
+              Llamar Ahora
+            </Button>
+            </a>
+            <a href="/pages/Contacto">
 
-      <section className="min-h-[800px]">
-        <BentoGridThirdDemo />
+            <Button
+              size="lg"
+              variant="secondary"
+              className="bg-white text-green-600"
+            >
+              <Mail className="mr-2 h-4 w-4" />
+              Enviar Email
+            </Button>
+
+            </a>
+          </div>
+        </div>
       </section>
     </main>
   );
