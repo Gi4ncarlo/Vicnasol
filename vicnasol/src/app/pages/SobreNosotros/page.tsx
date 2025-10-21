@@ -85,10 +85,10 @@ const services = [
             <div className="relative">
               <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/placeholder.svg?height=500&width=500"
+                  src="/images/trabajando.webp"
                   alt="Equipo de jardinería trabajando"
-                  width={500}
-                  height={500}
+                  width={1920}
+                  height={1080}
                   className="object-cover w-full h-full"
                 />
               </div>
